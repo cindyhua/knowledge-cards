@@ -152,8 +152,16 @@ token 文件留着当记录，但**状态是作废，不要拿去出图**，编�
 
 ## 新增一套风格（用户说「以后还会有其他喜欢的风格」时走这里）
 
-1. **先做出来再看编号**。用户通常是"看到成品喜欢上了"才编号的，不是先给编号再设计。
-   所以流程是：按用户描述做一套 → 用户认可 → 分配编号 → 归档。
+1. **先出样张，不要直接给编号**。编号库的规矩是：**先做出来给用户看，认可后才分配编号**。
+   所以用户说「做一套 XXX 风格」时，**不要**回「好，创建 STYLE-16」然后直接建档 ——
+   用户还没见过成图。正确顺序是：
+
+   ```
+   读本文档确认下一个可用编号 → 按描述做一套 → 出 2 张样张（封面 + 一张内容卡）
+   → 交付给用户看 → 用户认可 → 才分配编号并归档
+   ```
+
+   样张必须**看图确认**再交付，渲染返回 OK 不代表图对。
 
 2. **建两个文件**，和 `01` 同目录：
    - `STYLE-NN-<slug>.json` —— token，字段与 `STYLE-01-editorial.json` 完全一致
@@ -165,6 +173,20 @@ token 文件留着当记录，但**状态是作废，不要拿去出图**，编�
 4. **配色替换时的取值范围**：新风格的 block 结构可以照抄 `01`（五个 block 是通用词汇），
    通常只需换 `colors` 和 `type` 两个 token 段。只有当排版结构本身不同（例如圆角卡片、
    左图右文）时才需要改 `render_cards.js`，并在 SKILL.md 的 Procedure 里说明。
+
+5. **改完立刻提交**，skill 目录本身是 git 工作区，GitHub 就是多机同步源：
+
+   ```bash
+   cd ~/.minimax/skills/knowledge-cards
+   git add -A && git commit -m "Add STYLE-NN <name>" && git push
+   ```
+
+   漏了这一步，这套风格就只存在于这台机器上 —— 换台电脑 `git pull` 拿不到。
+   提交前跑一遍 lint：
+
+   ```bash
+   node ~/.minimax/.builtin-skills/skill-creator/scripts/lint-skill.js ~/.minimax/skills/knowledge-cards
+   ```
 
 ## canvas 与风格无关
 

@@ -94,6 +94,26 @@ description: |
 - 最终回复必须包含 `<deliver-assets>` 块，媒体路径是真实存在的绝对路径。
 - 附一份简短的分卡清单，说明每张卡承载什么。
 
+## 用户要新做一套风格时
+
+上面 8 步是**用已有编号出图**。用户说「做一套 XXX 风格」「以后还会有其他喜欢的风格」时，
+走另一条路，详见 [`references/style-registry.md`](references/style-registry.md) 的
+「新增一套风格」一节。三条最容易做错的：
+
+1. **不要先给编号**。编号库的规矩是先出样张、用户认可后才分配。用户没看过成图，
+   不要急着回「好，创建 STYLE-16」。下一个可用编号是 `16`，`02`–`05` 作废且不复用。
+2. **照抄 token 字段结构**。新风格通常只换 `colors` + `type` 两个段，
+   别自己发明新字段 —— 渲染器只认 `STYLE-01-editorial.json` 里有的那些。
+3. **做完必须 commit + push**。skill 目录本身是 git 工作区，
+   GitHub 就是多机同步源，漏提交等于换台电脑就丢了这套风格。
+
+```bash
+cd ~/.minimax/skills/knowledge-cards
+git add -A && git commit -m "Add STYLE-NN <name>" && git push
+```
+
+用户想看长什么样可以直接翻 [`docs/style-gallery.md`](docs/style-gallery.md)（15 套并排成图）。
+
 ## Failure handling
 
 - **找不到 Chrome / Edge**：渲染器会退出码 3 并提示设 `CHROME_PATH`。
