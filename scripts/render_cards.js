@@ -472,10 +472,14 @@ const BLOCKS = {
     // The oversized ghost numeral sits behind the headline. When the headline is a solid colour
     // slab it covers the numeral instead of layering with it, so drop it in that combination.
     const ghostHtml = titleBlock ? '' : `<div class="ghost">${esc(card.ghost || '')}</div>`;
+    // Escape first, then re-enable only <br>. CJK subtitles wrap wherever the box ends, which
+    // routinely strands one or two characters on the last line ("...学习路" / "径。"). Copy is
+    // allowed explicit line breaks but no other inline markup, so this is the single exception.
+    const subtitle = esc(card.subtitle).replace(/&lt;br\s*\/?&gt;/gi, '<br>');
     return (
       `${ghostHtml}<div class="body">` +
       `<div class="title${titleBlock ? ' tblock' : ''}">${(card.title || []).join('<br>')}</div>` +
-      `<div class="subtitle">${esc(card.subtitle)}</div>` +
+      `<div class="subtitle">${subtitle}</div>` +
       `<div class="vrule"></div>` +
       (toc ? `<div class="toc"><div class="lab">CONTENTS</div><ol>${toc}</ol></div>` : '') +
       statsHtml + hintHtml + `</div>`
