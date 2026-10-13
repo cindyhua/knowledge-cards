@@ -13,15 +13,37 @@
 
 ## 安装
 
-把仓库里的 `knowledge-cards/` 整个目录放进你的 skills 目录：
+整个仓库就是 skill 本体，clone 到 skills 目录即可：
 
 ```bash
-git clone https://github.com/cindyhua/knowledge-cards
-cp -r knowledge-cards/knowledge-cards ~/.minimax/skills/
+git clone git@github.com:cindyhua/knowledge-cards.git ~/.minimax/skills/knowledge-cards
 ```
 
-Windows 是 `%USERPROFILE%\.minimax\skills\`。放进去之后目录结构应该是
-`skills/knowledge-cards/SKILL.md` —— 目录名必须和 SKILL.md 里的 `name` 一致。
+Windows 把 `~/.minimax/skills/` 换成 `%USERPROFILE%\.minimax\skills\`。
+落地后目录结构是 `skills/knowledge-cards/SKILL.md` —— 目录名必须和 SKILL.md 里的 `name` 一致。
+
+不想用 SSH 就用 HTTPS（GitHub 现在要求 PAT）：
+
+```bash
+git clone https://github.com/cindyhua/knowledge-cards.git ~/.minimax/skills/knowledge-cards
+```
+
+### 多台机器之间同步
+
+这个仓库就是同步源，本地改了 push，别处 `git pull`：
+
+```bash
+cd ~/.minimax/skills/knowledge-cards
+
+# 加了新风格或改了文档后
+git add -A && git commit -m "Add STYLE-16 xxx" && git push
+
+# 另一台机器取最新
+git pull
+```
+
+> 用 HTTPS 克隆的话记住配好凭据管理器，否则每次 pull 都要输 token。
+> 新机器首次使用需要先把自己的 SSH 公钥加到 GitHub（Settings → SSH and GPG keys）。
 
 ## 环境依赖
 
@@ -69,7 +91,9 @@ node scripts/render_cards.js --spec cards.json \
 ## 风格编号库
 
 15 套风格，`02`–`05` 因版式像 PPT 被判**作废**（编号不复用，留档仅作记录）。
-查号和加新风格的规矩看 [`knowledge-cards/references/style-registry.md`](knowledge-cards/references/style-registry.md)。
+
+📸 **想先看长什么样 → [风格图鉴](docs/style-gallery.md)**，15 套并排的真实成图对照。
+查号和加新风格的规矩 → [`references/style-registry.md`](references/style-registry.md)。
 
 | 编号 | 名称 | 状态 |
 |---|---|---|
@@ -113,19 +137,25 @@ node scripts/render_cards.js --spec cards.json \
 
 ## 仓库结构
 
+仓库根就是 skill 本体，clone 到 `skills/knowledge-cards/` 即可直接用。
+
 ```
-README.md                  本文件
-LICENSE                    MIT
-assets/art-pool/           插画素材池（13 张横带 + pool.json 清单）
-knowledge-cards/           ← 这个目录装进 skills/
-  ├── SKILL.md             Skill 主文件
-  ├── scripts/
-  │   └── render_cards.js  渲染器，零依赖
-  └── references/
-      ├── style-registry.md    编号库：查号、新风格的规矩、踩过的坑
-      ├── STYLE-NN-*.json      token 文件（渲染器读）
-      └── STYLE-NN-*.md        规格文档（怎么写 cards.json）
+SKILL.md                     Skill 主文件
+scripts/render_cards.js      渲染器，零依赖
+references/
+  style-registry.md          编号库：查号、新风格的规矩、踩过的坑
+  STYLE-NN-*.json            token 文件（渲染器读）
+  STYLE-NN-*.md              规格文档（怎么写 cards.json）
+assets/art-pool/             插画素材池（13 张横带 + pool.json + prompts.json）
+docs/
+  style-gallery.md           📸 风格图鉴：15 套并排成图
+  images/                    图鉴用的缩略图
+readme.md                    本文件
+LICENSE                      MIT
 ```
+
+> `readme.md` 特意用小写：skill 规范禁止在 skill 目录里出现面向人的 `README.md`
+> （怕被模型当文档读进去浪费上下文），而 GitHub 认小写，一样会在首页渲染。
 
 ## 一些硬规矩
 
