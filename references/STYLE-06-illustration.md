@@ -18,6 +18,38 @@ Token 文件：`STYLE-06-illustration.json`。本文额外说明**插画资产�
 
 插画带宽度铺满卡片内边距，圆角跟随风格的 `radius`，`object-fit: cover` 居中裁切。
 
+## 06 同时支持 `cover` 和 `poster` —— 出套图请用 `poster`
+
+早期 06 的封面走 `cover`（目录 + 统计 + 提示行）。那个版式在缩略图尺寸下完全塌了：
+六行目录挤在下面，整张图读起来就是一张目录页，没有任何拦截力。
+现在 06 补齐了 `poster` token，**出套图时封面一律走 `poster`**：
+
+| token | 值 | 为什么 |
+|---|---|---|
+| `posterBg` | `#FBF3E7` | 和 `paper` 同色，封面和内容卡才像一套 |
+| `posterInk` | `#2D2A26` | 墨色巨标题压奶油底 |
+| `posterArtH` | **430** | 见下面的高度预算 |
+| `posterArtPosition` | `center 40%` | 原生 21:9 横带裁成 2.5:1，偏上取焦点 |
+| `posterTitle` | **178** | 顶到竖版宽度上限，再大「Agent 工程」那行就换行 |
+| `posterTexture` | `none` | 奶油底本来就浅，加噪点只会显脏 |
+
+强调色**只给 `blk` 一处**（`<span class="blk">5</span>`），不要再加 `seal`。
+封面里不要出现 `toc`、`stats`、`hint` —— 那是 `cover` 的字段，`poster` 会忽略。
+
+推荐的 06 封面 spec 骨架：
+
+```json
+{
+  "block": "poster",
+  "name": "01-cover",
+  "art": "<21:9 原生横带插画>",
+  "kicker": "AI AGENT · 一手资料",
+  "title": ["Agent 工程", "必读的", "<span class=\"blk\">5</span> 份资料"],
+  "sub": "从方法论到安全与评测，一条能照着走的路径",
+  "tags": ["封面 + <b>4</b> 张内容卡", "总时长 <b>340</b> 分钟", "难度 <b>★★★→★★★★★</b>"]
+}
+```
+
 ## 生成插画（关键流程）
 
 用 `mcode-tools` 的文生图。**先加载 `mcode-tools-master` skill** 再执行命令。
@@ -82,6 +114,7 @@ Generous negative space. Modern magazine illustration style.
 
 | 卡片 | artHeight | 说明 |
 |---|---|---|
+| `poster` | 由 `variants.posterArtH` 控制（当前 430） | 别用 `artHeight`，poster 不读这个字段 |
 | `cover` 带 toc + stats + hint | **280** | 上限。380 会把 hint 整行挤掉 |
 | `cover` 不带 toc | 380～420 | 目录和插画二选一，别都要 |
 | `resource` / `items` / `qa` | **300** | 再高就得砍掉 `more` 或缩短正文 |

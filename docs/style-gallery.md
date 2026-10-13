@@ -24,14 +24,15 @@
 
 ### `06` 插画风
 
-奶油底 + 珊瑚橙 + 大圆角，卡片顶部配扁平矢量插画。亲和力最强的一套。
+奶油底 + 珊瑚橙 + 大圆角，顶部一条扁平矢量插画带 + 墨色巨标题。亲和力最强的一套，
+走 `poster` 版式，所以缩略图里也压得住。
 
 <table>
 <tr>
 <td><img src="images/style-06-cover.jpg" alt="STYLE-06 封面" width="300"></td>
 <td><img src="images/style-06-card.jpg" alt="STYLE-06 内容卡" width="300"></td>
 </tr>
-<tr><td align="center"><sub>封面 + 插画带</sub></td><td align="center"><sub>resource 资料详解</sub></td></tr>
+<tr><td align="center"><sub>poster + 插画带</sub></td><td align="center"><sub>resource 资料详解</sub></td></tr>
 </table>
 
 ### `10` 干货大字报
@@ -201,7 +202,11 @@ token 文件也留着当记录，但**状态是作废，编号不复用，不要
 | 底色 | 纸底即可 | 走极端明度，且要带质感（`posterTexture`） |
 
 判断标准：**这张图的任务是「告诉人里面有什么」还是「让人点进来」**。
-`10`–`15` 用 `poster`，`01`/`06`/`07`–`09` 用 `cover`。
+`06`、`10`–`15` 用 `poster`，`01`/`07`–`09` 用 `cover`。
+
+> `06` 早期也用 `cover`，图鉴里看着就像一张目录页 —— 六行目录 + 统计行 + 提示行，
+> 缩略图尺寸下完全没有拦截力。改成 `poster` 之后（插画带 + 巨标题 + 一处强调）才是这套风格该有的样子。
+> 内容卡仍是 `resource`，一poster 一正文本来就是两套逻辑。
 
 ## 怎么选
 

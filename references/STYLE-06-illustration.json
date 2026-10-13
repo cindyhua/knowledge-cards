@@ -29,6 +29,13 @@
     "mono": "'Consolas','Courier New','Noto Sans SC',monospace"
   },
   "type": {
+    "posterTitle": 178,
+    "posterSub": 31,
+    "posterKicker": 21,
+    "posterTag": 21,
+    "posterPadX": 68,
+    "posterPadY": 40,
+    "posterPadB": 60,
     "coverTitle": 86,
     "coverSub": 29,
     "title": 56,
@@ -46,6 +53,17 @@
     "lead": 23
   },
   "variants": {
+    "posterBg": "#FBF3E7",
+    "posterInk": "#2D2A26",
+    "posterInkMuted": "#948B7E",
+    "posterSealBg": "#E8705A",
+    "posterSealInk": "#FBF3E7",
+    "posterTagInk": "#2D2A26",
+    "posterTexture": "none",
+    "posterArtH": 430,
+    "posterArtPosition": "center 40%",
+    "posterRuleW": 180,
+    "posterRuleH": 10,
     "coverBg": "paper",
     "quoteStyle": "bar",
     "radius": 24,
@@ -56,6 +74,7 @@
     "titleLetterSpacing": "-0.01em",
     "metaBorder": 2
   },
+  "posterNote": "06 同时支持 cover 和 poster，出套图时封面一律走 poster。走 poster 时：奶油底全图铺满，插画带占顶部 430px，巨标题 178px 三行，强调色只给 blk 一处。奶油底贴浅，所以 texture 用 none；posterBg 与 paper 同色，封面和内容卡才像一套。",
   "art": {
     "_note": "插画资产不是 token，是每张卡单独生成的图。见 STYLE-06-illustration.md 的提示词模板与生成流程。",
     "defaultHeight": 300,
