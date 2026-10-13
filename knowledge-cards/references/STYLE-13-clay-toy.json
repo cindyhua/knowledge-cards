@@ -1,0 +1,77 @@
+{
+  "id": "STYLE-13",
+  "name": "毛绒潮玩",
+  "oneLine": "顶部毛绒 3D 小角色插画带 + 薄荷奶油底 + 白色超粗黑巨标题",
+  "bestFor": "新手向、亲和力强的选题：入门科普、工具推荐、打卡记录。",
+  "canvas": {
+    "width": 1080,
+    "height": 1440
+  },
+  "supportedCanvas": [
+    [
+      1080,
+      1440
+    ],
+    [
+      1080,
+      1080
+    ]
+  ],
+  "canvasNote": "插画带高度由 variants.posterArtH 决定；换题材时角色要重新生，比例默认 3:4 且必须无文字。",
+  "colors": {
+    "paper": "#FFFFFF",
+    "ink": "#1B2B26",
+    "accent": "#FF6B57",
+    "muted": "#5C6B66",
+    "hairline": "#DCE7E3",
+    "quote": "#EAF4F0",
+    "body": "#2C3B36",
+    "titleCn": "#5C6B66",
+    "onAccent": "#FFFFFF",
+    "footMuted": "#7D8A85"
+  },
+  "fonts": {
+    "serif": "'Noto Serif SC','Source Han Serif SC','Songti SC',serif",
+    "sans": "'Noto Sans SC','Source Han Sans SC','Microsoft YaHei',sans-serif"
+  },
+  "type": {
+    "posterTitle": 168,
+    "posterSub": 31,
+    "posterKicker": 21,
+    "posterTag": 21,
+    "posterPadX": 68,
+    "posterPadY": 40,
+    "posterPadB": 60,
+    "body": 26,
+    "title": 60,
+    "titleCn": 33,
+    "keys": 25,
+    "quote": 28,
+    "kicker": 19,
+    "folio": 19,
+    "label": 17,
+    "metaVal": 27,
+    "itemTitle": 31,
+    "itemDesc": 25,
+    "qaText": 28,
+    "lead": 25
+  },
+  "variants": {
+    "posterBg": "#F4FAF8",
+    "posterInk": "#1B2B26",
+    "posterInkMuted": "#5C6B66",
+    "posterSealBg": "#FF6B57",
+    "posterSealInk": "#FFFFFF",
+    "posterTexture": "none",
+    "posterArtH": 520,
+    "posterRuleW": 180,
+    "posterRuleH": 10,
+    "quoteStyle": "high",
+    "metaLayout": "stack",
+    "secLabel": "block",
+    "bulletShape": "dot",
+    "radius": 0,
+    "ruleWeight": 4
+  },
+  "_note": "插画占了上半幅，标题只剩约 620px 纵向空间，所以字号从 178 降到 168，标题行数控制在 2–3 行。texture 用 none，浅底不需要噪点。"
+}

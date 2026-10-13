@@ -1,0 +1,61 @@
+{
+  "id": "STYLE-04",
+  "name": "科技冷光风",
+  "oneLine": "深空底全篇 + 霓虹青强调 + 等宽标签 + 圆角描边卡片",
+  "bestFor": "技术科普、AI/开发主题、产品发布、偏硬核的干货",
+  "canvas": { "width": 1080, "height": 1440 },
+  "supportedCanvas": [[1080, 1440], [1080, 1080]],
+  "colors": {
+    "paper": "#0B0E14",
+    "ink": "#E8EDF5",
+    "accent": "#22D3EE",
+    "muted": "#7D8AA0",
+    "hairline": "#232B3A",
+    "quote": "#111827",
+    "body": "#C3CCDA",
+    "titleCn": "#93A1B5",
+    "ghost": "#131A26",
+    "ghostCover": "#141B28",
+    "coverSub": "#7D8AA0",
+    "coverRule": "#1E2735",
+    "coverDim": "#6B7891",
+    "tocText": "#AFBCCE",
+    "footMuted": "#6B7891",
+    "onAccent": "#0B0E14",
+    "onAccentMuted": "#0A1A20",
+    "coverAccent": "#22D3EE"
+  },
+  "fonts": {
+    "serif": "'Noto Sans SC','Source Han Sans SC','Microsoft YaHei',sans-serif",
+    "sans": "'Noto Sans SC','Source Han Sans SC','Microsoft YaHei',sans-serif",
+    "mono": "'Consolas','Cascadia Mono','Courier New','Noto Sans SC',monospace"
+  },
+  "type": {
+    "coverTitle": 100,
+    "coverSub": 29,
+    "title": 58,
+    "titleCn": 30,
+    "body": 24,
+    "keys": 23,
+    "quote": 26,
+    "kicker": 18,
+    "folio": 18,
+    "label": 17,
+    "metaVal": 25,
+    "itemTitle": 28,
+    "itemDesc": 23,
+    "qaText": 26,
+    "lead": 23
+  },
+  "variants": {
+    "coverBg": "ink",
+    "quoteStyle": "outline",
+    "radius": 12,
+    "mono": true,
+    "bullet": "accent",
+    "ruleWeight": 2,
+    "titleWeight": 800,
+    "titleLetterSpacing": "-0.01em",
+    "metaBorder": 1
+  }
+}

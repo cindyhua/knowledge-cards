@@ -1,0 +1,66 @@
+{
+  "id": "STYLE-06",
+  "name": "插画风",
+  "oneLine": "奶油底 + 珊瑚橙强调 + 大圆角，卡片顶部配扁平矢量插画",
+  "bestFor": "生活方式、亲子、教育科普、需要亲和力和停留感的选题",
+  "canvas": { "width": 1080, "height": 1440 },
+  "supportedCanvas": [[1080, 1440], [1080, 1080]],
+  "colors": {
+    "paper": "#FBF3E7",
+    "ink": "#2D2A26",
+    "accent": "#E8705A",
+    "muted": "#948B7E",
+    "hairline": "#E8DCC8",
+    "quote": "#F7E9D6",
+    "body": "#4A443C",
+    "titleCn": "#6E6459",
+    "ghost": "#F2E6D2",
+    "ghostCover": "#F2E6D2",
+    "coverSub": "#8A8074",
+    "coverRule": "#E8DCC8",
+    "coverDim": "#948B7E",
+    "tocText": "#4A443C",
+    "footMuted": "#948B7E",
+    "onAccent": "#FBF3E7"
+  },
+  "fonts": {
+    "serif": "'Noto Sans SC','Source Han Sans SC','Microsoft YaHei',sans-serif",
+    "sans": "'Noto Sans SC','Source Han Sans SC','Microsoft YaHei',sans-serif",
+    "mono": "'Consolas','Courier New','Noto Sans SC',monospace"
+  },
+  "type": {
+    "coverTitle": 86,
+    "coverSub": 29,
+    "title": 56,
+    "titleCn": 29,
+    "body": 24,
+    "keys": 23,
+    "quote": 26,
+    "kicker": 18,
+    "folio": 18,
+    "label": 17,
+    "metaVal": 25,
+    "itemTitle": 28,
+    "itemDesc": 23,
+    "qaText": 26,
+    "lead": 23
+  },
+  "variants": {
+    "coverBg": "paper",
+    "quoteStyle": "bar",
+    "radius": 24,
+    "mono": false,
+    "bullet": "accent",
+    "ruleWeight": 3,
+    "titleWeight": 800,
+    "titleLetterSpacing": "-0.01em",
+    "metaBorder": 2
+  },
+  "art": {
+    "_note": "插画资产不是 token，是每张卡单独生成的图。见 STYLE-06-illustration.md 的提示词模板与生成流程。",
+    "defaultHeight": 300,
+    "coverHeight": 280,
+    "aspectRatio": "21:9",
+    "palette": "cream #FBF3E7 / coral #E8705A / mint #7CC6A8 / warm yellow #F5B841"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "STYLE-15",
+  "name": "微缩立体书",
+  "oneLine": "顶部微缩立体书插画带 + 深青底 + 金黄发光巨标题，暗底金字",
+  "bestFor": "学习路线、知识地图、体系化的长内容。深底让插画的暖光更突出。",
+  "canvas": {
+    "width": 1080,
+    "height": 1440
+  },
+  "supportedCanvas": [
+    [
+      1080,
+      1440
+    ],
+    [
+      1080,
+      1080
+    ]
+  ],
+  "canvasNote": "深底 + 插画时插画带底部要有一条硬边，不能让插画渐隐进底色，否则整张糊掉。",
+  "colors": {
+    "paper": "#0A1F1E",
+    "ink": "#F6E7C8",
+    "accent": "#FFC53D",
+    "muted": "#A8B8B8",
+    "hairline": "#20403E",
+    "quote": "#14302F",
+    "body": "#C9D8D6",
+    "titleCn": "#8FA8A6",
+    "onAccent": "#0A1F1E",
+    "footMuted": "#93A9A7"
+  },
+  "fonts": {
+    "serif": "'Noto Serif SC','Source Han Serif SC','Songti SC',serif",
+    "sans": "'Noto Sans SC','Source Han Sans SC','Microsoft YaHei',sans-serif"
+  },
+  "type": {
+    "posterTitle": 168,
+    "posterSub": 31,
+    "posterKicker": 21,
+    "posterTag": 21,
+    "posterPadX": 68,
+    "posterPadY": 40,
+    "posterPadB": 60,
+    "body": 26,
+    "title": 58,
+    "titleCn": 32,
+    "keys": 25,
+    "quote": 28,
+    "kicker": 19,
+    "folio": 19,
+    "label": 17,
+    "metaVal": 27,
+    "itemTitle": 30,
+    "itemDesc": 24,
+    "qaText": 28,
+    "lead": 24
+  },
+  "variants": {
+    "posterBg": "#0A1F1E",
+    "posterInk": "#F6E7C8",
+    "posterInkMuted": "#A8B8B8",
+    "posterSealBg": "#FFC53D",
+    "posterSealInk": "#0A1F1E",
+    "posterTagInk": "#FFC53D",
+    "posterTexture": "grain",
+    "posterArtH": 520,
+    "posterRuleW": 180,
+    "posterRuleH": 10,
+    "quoteStyle": "outline",
+    "metaLayout": "stack",
+    "secLabel": "underline",
+    "bulletShape": "bar",
+    "radius": 0,
+    "ruleWeight": 4
+  },
+  "_note": "金色标题压在深青底上，暗底是全套里对比最强的一套；标签里的强调数字也用金色，保证深底下的可读性。"
+}

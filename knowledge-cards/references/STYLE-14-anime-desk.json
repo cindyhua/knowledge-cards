@@ -1,0 +1,78 @@
+{
+  "id": "STYLE-14",
+  "name": "动漫工位",
+  "oneLine": "顶部 2.5D 动漫插画带 + 奶油珊瑚底 + 墨棕超粗黑巨标题",
+  "bestFor": "行业科普、职业揭秘、面向具体人群的内容。",
+  "canvas": {
+    "width": 1080,
+    "height": 1440
+  },
+  "supportedCanvas": [
+    [
+      1080,
+      1440
+    ],
+    [
+      1080,
+      1080
+    ]
+  ],
+  "canvasNote": "插画必须无文字、屏幕不可读；卡通主体比写实更容易在缩略图里辨识。",
+  "colors": {
+    "paper": "#FFFFFF",
+    "ink": "#3A2412",
+    "accent": "#FF7A45",
+    "muted": "#7A5C42",
+    "hairline": "#F0DCC8",
+    "quote": "#FFF0E4",
+    "body": "#4A3220",
+    "titleCn": "#7A5C42",
+    "onAccent": "#FFFFFF",
+    "footMuted": "#96795E"
+  },
+  "fonts": {
+    "serif": "'Noto Serif SC','Source Han Serif SC','Songti SC',serif",
+    "sans": "'Noto Sans SC','Source Han Sans SC','Microsoft YaHei',sans-serif"
+  },
+  "type": {
+    "posterTitle": 168,
+    "posterSub": 31,
+    "posterKicker": 21,
+    "posterTag": 21,
+    "posterPadX": 68,
+    "posterPadY": 40,
+    "posterPadB": 60,
+    "body": 26,
+    "title": 60,
+    "titleCn": 33,
+    "keys": 25,
+    "quote": 28,
+    "kicker": 19,
+    "folio": 19,
+    "label": 17,
+    "metaVal": 27,
+    "itemTitle": 31,
+    "itemDesc": 25,
+    "qaText": 28,
+    "lead": 25
+  },
+  "variants": {
+    "posterBg": "#FFF8F0",
+    "posterInk": "#3A2412",
+    "posterInkMuted": "#7A5C42",
+    "posterSealBg": "#FF7A45",
+    "posterSealInk": "#FFFFFF",
+    "posterTexture": "paper",
+    "posterArtH": 520,
+    "posterArtPosition": "center 10%",
+    "posterRuleW": 180,
+    "posterRuleH": 10,
+    "quoteStyle": "fill",
+    "metaLayout": "inline",
+    "secLabel": "plain",
+    "bulletShape": "dash",
+    "radius": 0,
+    "ruleWeight": 4
+  },
+  "_note": "浅底用纸纹理呼应插画的平涂质感；墨棕比纯黑更贴暖调插画。"
+}

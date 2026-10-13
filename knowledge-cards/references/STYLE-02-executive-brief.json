@@ -1,0 +1,61 @@
+{
+  "id": "STYLE-02",
+  "name": "商务简报风",
+  "oneLine": "冷白底 + 深藏青封面 + 铜金强调，全无衬线，描边引语框",
+  "bestFor": "行业报告、B端方案、企业内部分享、需要显得专业可信的场合",
+  "canvas": { "width": 1080, "height": 1440 },
+  "supportedCanvas": [[1080, 1440], [1080, 1080]],
+  "colors": {
+    "paper": "#F6F7F9",
+    "ink": "#12233A",
+    "accent": "#B0873F",
+    "muted": "#7C8794",
+    "hairline": "#DCE0E6",
+    "quote": "#E9EDF2",
+    "body": "#2C3A4B",
+    "titleCn": "#4A5768",
+    "ghost": "#E4E8ED",
+    "ghostCover": "#1B304A",
+    "coverSub": "#9FAAB8",
+    "coverRule": "#2C3E57",
+    "coverDim": "#8494A6",
+    "tocText": "#C8D1DC",
+    "footMuted": "#7C8794",
+    "onAccent": "#F6F7F9",
+    "onAccentMuted": "#B9C4D1",
+    "coverAccent": "#C9A227"
+  },
+  "fonts": {
+    "serif": "'Microsoft YaHei UI','Noto Sans SC','Source Han Sans SC',sans-serif",
+    "sans": "'Noto Sans SC','Source Han Sans SC','Microsoft YaHei',sans-serif",
+    "mono": "'Consolas','Cascadia Mono','Courier New','Noto Sans SC',monospace"
+  },
+  "type": {
+    "coverTitle": 104,
+    "coverSub": 30,
+    "title": 60,
+    "titleCn": 31,
+    "body": 25,
+    "keys": 24,
+    "quote": 27,
+    "kicker": 18,
+    "folio": 18,
+    "label": 17,
+    "metaVal": 26,
+    "itemTitle": 29,
+    "itemDesc": 24,
+    "qaText": 27,
+    "lead": 24
+  },
+  "variants": {
+    "coverBg": "ink",
+    "quoteStyle": "outline",
+    "radius": 4,
+    "mono": true,
+    "bullet": "accent",
+    "ruleWeight": 2,
+    "titleWeight": 800,
+    "titleLetterSpacing": "-0.005em",
+    "metaBorder": 2
+  }
+}

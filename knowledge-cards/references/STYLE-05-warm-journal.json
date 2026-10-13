@@ -1,0 +1,60 @@
+{
+  "id": "STYLE-05",
+  "name": "暖调手账风",
+  "oneLine": "米杏底全篇 + 浅色封面 + 赭石强调，大圆角、柔和字重",
+  "bestFor": "生活方式、读书笔记、个人成长、情绪化/陪伴感的内容",
+  "canvas": { "width": 1080, "height": 1440 },
+  "supportedCanvas": [[1080, 1440], [1080, 1080]],
+  "colors": {
+    "paper": "#FBF5EC",
+    "ink": "#3A2E25",
+    "accent": "#C0663A",
+    "muted": "#9A8878",
+    "hairline": "#E7DCCC",
+    "quote": "#F3E7D6",
+    "body": "#574A3E",
+    "titleCn": "#7A6958",
+    "ghost": "#F1E6D6",
+    "ghostCover": "#F1E6D6",
+    "coverSub": "#7A6958",
+    "coverRule": "#E7DCCC",
+    "coverDim": "#9A8878",
+    "tocText": "#574A3E",
+    "footMuted": "#9A8878",
+    "onAccent": "#FBF5EC",
+    "onAccentMuted": "#F3E7D6"
+  },
+  "fonts": {
+    "serif": "'Noto Serif SC','Source Han Serif SC','Songti SC',serif",
+    "sans": "'Noto Sans SC','Source Han Sans SC','Microsoft YaHei',sans-serif",
+    "mono": "'Consolas','Courier New','Noto Sans SC',monospace"
+  },
+  "type": {
+    "coverTitle": 104,
+    "coverSub": 31,
+    "title": 62,
+    "titleCn": 32,
+    "body": 25,
+    "keys": 24,
+    "quote": 28,
+    "kicker": 18,
+    "folio": 18,
+    "label": 17,
+    "metaVal": 27,
+    "itemTitle": 30,
+    "itemDesc": 24,
+    "qaText": 28,
+    "lead": 24
+  },
+  "variants": {
+    "coverBg": "paper",
+    "quoteStyle": "bar",
+    "radius": 20,
+    "mono": false,
+    "bullet": "accent",
+    "ruleWeight": 3,
+    "titleWeight": 700,
+    "titleLetterSpacing": "0em",
+    "metaBorder": 2
+  }
+}

@@ -1,0 +1,24 @@
+# 渲染产物
+out/
+*.png
+!assets/art-pool/*.png
+!assets/art-pool/*.jpg
+
+# 渲染器写出的中间 HTML 和溢出探针
+**/html/
+**/*.probe.html
+
+# Node
+node_modules/
+npm-debug.log*
+
+# 编辑器
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 本地卡片产物（内容是每次发帖的具体文案，不入库）
+cards.json
+out-*/
+*.local.json

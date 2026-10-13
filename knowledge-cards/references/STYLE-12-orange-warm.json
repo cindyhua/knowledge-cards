@@ -1,0 +1,77 @@
+{
+  "id": "STYLE-12",
+  "name": "活力橙",
+  "oneLine": "活力橙渐变底 + 白色超粗黑巨标题 + 暖光晕，字压光斑、氛围感强",
+  "bestFor": "生活方式、成长记录、打卡类、情绪强的主题。",
+  "canvas": {
+    "width": 1080,
+    "height": 1440
+  },
+  "supportedCanvas": [
+    [
+      1080,
+      1440
+    ],
+    [
+      1080,
+      1080
+    ]
+  ],
+  "canvasNote": "posterBg 直接吃 CSS 渐变字符串；深色渐变端会影响白色标题对比度，改配色时要一起看图。",
+  "colors": {
+    "paper": "#FFEFD9",
+    "ink": "#3A2412",
+    "accent": "#E86A17",
+    "muted": "#7A5C42",
+    "hairline": "#F0D5B0",
+    "quote": "#FFE0B8",
+    "body": "#4A3220",
+    "titleCn": "#7A5C42",
+    "onAccent": "#4A2C0A",
+    "footMuted": "#FFD9AE"
+  },
+  "fonts": {
+    "serif": "'Noto Serif SC','Source Han Serif SC','Songti SC',serif",
+    "sans": "'Noto Sans SC','Source Han Sans SC','Microsoft YaHei',sans-serif"
+  },
+  "type": {
+    "posterTitle": 178,
+    "posterSub": 33,
+    "posterKicker": 22,
+    "posterTag": 22,
+    "posterPadX": 72,
+    "posterPadY": 78,
+    "posterPadB": 66,
+    "body": 26,
+    "title": 60,
+    "titleCn": 33,
+    "keys": 25,
+    "quote": 28,
+    "kicker": 19,
+    "folio": 19,
+    "label": 17,
+    "metaVal": 27,
+    "itemTitle": 31,
+    "itemDesc": 25,
+    "qaText": 28,
+    "lead": 25
+  },
+  "variants": {
+    "posterBg": "linear-gradient(158deg,#FF9E2C 0%,#FFC53D 58%,#FFD98A 100%)",
+    "posterInk": "#FFFFFF",
+    "posterInkMuted": "#7A3E06",
+    "posterSealBg": "#E6392B",
+    "posterSealInk": "#FFFFFF",
+    "posterTagInk": "#5A3204",
+    "posterTexture": "glow",
+    "posterRuleW": 240,
+    "posterRuleH": 12,
+    "quoteStyle": "fill",
+    "metaLayout": "inline",
+    "secLabel": "plain",
+    "bulletShape": "arrow",
+    "radius": 0,
+    "ruleWeight": 4
+  },
+  "_note": "标题用白、副标题用深棕，是暖底上唯一能同时保证大字面反差和小字可读的组合。glow 用的 accent 是荧光黄，与标题白字形成第二层对比。"
+}

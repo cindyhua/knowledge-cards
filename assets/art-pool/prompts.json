@@ -1,0 +1,58 @@
+{
+  "requests": [
+    {
+      "prompt": "A cute 3D felted plush toy character in soft mint-green and cream fabric with big glossy black button eyes, sitting at a tidy wooden desk with an open hardcover book in front of it, soft studio lighting, plush-toy material, shallow depth of field. COOL MINT PALETTE: the background is plain vertical stripes of pale mint green and soft cream, very light and desaturated. ABSOLUTELY NO WARM ORANGE AND NO RED anywhere in the image - no orange, no red, no coral, no terracotta, no warm brown. STRICTLY CENTRED COMPOSITION: the character's head sits exactly at the horizontal centre of the frame and the scene is symmetrically balanced. The desk spans the full width of the frame as a low horizontal band; a short stack of plain blank books on the LEFT and a small pale ceramic cup with a white flower on the RIGHT carry equal visual weight so neither side reads as empty negative space. Absolutely no text, no letters, no numbers, no typography, no readable book pages, no watermark anywhere in the image.",
+      "aspect_ratio": "21:9",
+      "resolution": "2K",
+      "output_file": "13-study.jpg"
+    },
+    {
+      "prompt": "A cute 3D felted plush toy character in soft mint-green and cream fabric with big glossy black button eyes, sitting at a tidy wooden desk in front of an open laptop with a plain blank screen, soft studio lighting, plush-toy material, shallow depth of field. COOL MINT PALETTE: the background is plain vertical stripes of pale mint green and soft cream, very light and desaturated. ABSOLUTELY NO WARM ORANGE AND NO RED anywhere in the image - no orange, no red, no coral, no terracotta, no warm brown. STRICTLY CENTRED COMPOSITION: the character's head sits exactly at the horizontal centre of the frame and the scene is symmetrically balanced. The desk spans the full width of the frame as a low horizontal band; a small pale mug on the LEFT and a rounded pale-grey desk lamp on the RIGHT carry equal visual weight so neither side reads as empty negative space. Absolutely no text, no letters, no numbers, no typography, no readable screen content, no watermark anywhere in the image.",
+      "aspect_ratio": "21:9",
+      "resolution": "2K",
+      "output_file": "13-code.jpg"
+    },
+    {
+      "prompt": "A cute 3D felted plush toy character in soft mint-green and cream fabric with big glossy black button eyes, standing behind a tidy wooden desk and holding up a large blank magnifying glass, soft studio lighting, plush-toy material, shallow depth of field. COOL MINT PALETTE: the background is plain vertical stripes of pale mint green and soft cream, very light and desaturated. ABSOLUTELY NO WARM ORANGE AND NO RED anywhere in the image - no orange, no red, no coral, no terracotta, no warm brown. STRICTLY CENTRED COMPOSITION: the character's head sits exactly at the horizontal centre of the frame and the scene is symmetrically balanced. The desk spans the full width of the frame as a low horizontal band; a plain blank chart board on a stand on the LEFT and a small pale ceramic pot with a white flower on the RIGHT carry equal visual weight so neither side reads as empty negative space. Absolutely no text, no letters, no numbers, no typography, no readable chart marks, no watermark anywhere in the image.",
+      "aspect_ratio": "21:9",
+      "resolution": "2K",
+      "output_file": "13-inspect.jpg"
+    },
+    {
+      "prompt": "A cute 2.5D anime chibi character with orange hair sitting at a tidy desk typing on a laptop keyboard, seen straight from the front, cel-shaded flat colouring with clean black line art. WARM CREAMY COLOUR SCHEME: the background is plain vertical stripes of pale warm apricot and soft creamy beige, very light, low-saturation and desaturated, so the coral-orange character clearly pops forward against it. ABSOLUTELY NO GREEN anywhere in the image - no mint, no sage, no teal, no green-tinted background, wall, book, cloth or plant. STRICTLY CENTRED COMPOSITION: the character's head sits exactly at the horizontal centre of the frame and the whole scene is symmetrically balanced. The desk spans the full width of the frame as a low horizontal band; a small bookshelf holding plain blank cream and terracotta books on the LEFT and a warm terracotta mug with a small rounded cactus on the RIGHT carry equal visual weight so neither side reads as empty negative space. Flat uncluttered background, no gradients. Front lighting. Absolutely no text, no letters, no numbers, no typography, no readable screen content, no watermark anywhere in the image.",
+      "aspect_ratio": "21:9",
+      "resolution": "2K",
+      "output_file": "14-code.jpg"
+    },
+    {
+      "prompt": "A cute 2.5D anime chibi character with orange hair sitting at a tidy desk writing in a notebook with a pencil, seen straight from the front, cel-shaded flat colouring with clean black line art. WARM CREAMY COLOUR SCHEME: the background is plain vertical stripes of pale warm apricot and soft creamy beige, very light, low-saturation and desaturated, so the coral-orange character clearly pops forward against it. ABSOLUTELY NO GREEN anywhere in the image - no mint, no sage, no teal, no green-tinted background, wall, book, cloth or plant. STRICTLY CENTRED COMPOSITION: the character's head sits exactly at the horizontal centre of the frame and the whole scene is symmetrically balanced. The desk spans the full width of the frame as a low horizontal band; a stack of plain blank cream books and a terracotta pencil holder on the LEFT and a warm terracotta mug with a small rounded cactus on the RIGHT carry equal visual weight so neither side reads as empty negative space. Flat uncluttered background, no gradients. Front lighting. Absolutely no text, no letters, no numbers, no typography, no handwriting, no readable pages, no watermark anywhere in the image.",
+      "aspect_ratio": "21:9",
+      "resolution": "2K",
+      "output_file": "14-write.jpg"
+    },
+    {
+      "prompt": "A cute 2.5D anime chibi character with orange hair sitting at a tidy desk reading an open book, seen straight from the front, cel-shaded flat colouring with clean black line art. WARM CREAMY COLOUR SCHEME: the background is plain vertical stripes of pale warm apricot and soft creamy beige, very light, low-saturation and desaturated, so the coral-orange character clearly pops forward against it. ABSOLUTELY NO GREEN anywhere in the image - no mint, no sage, no teal, no green-tinted background, wall, book, cloth or plant. STRICTLY CENTRED COMPOSITION: the character's head sits exactly at the horizontal centre of the frame and the whole scene is symmetrically balanced. The desk spans the full width of the frame as a low horizontal band; a small bookshelf holding plain blank cream and terracotta books on the LEFT and a warm terracotta mug with a small rounded cactus on the RIGHT carry equal visual weight so neither side reads as empty negative space. Flat uncluttered background, no gradients. Front lighting. Absolutely no text, no letters, no numbers, no typography, no readable book pages, no watermark anywhere in the image.",
+      "aspect_ratio": "21:9",
+      "resolution": "2K",
+      "output_file": "14-read.jpg"
+    },
+    {
+      "prompt": "A miniature pop-up book diorama rising from the pages of an open book: a tiny layered paper forest of rounded miniature trees, a small winding stream, a delicate arched wooden footbridge and a tiny bench, tilt-shift miniature-photography look with soft depth-of-field blur, warm golden light from the upper left, subtle teal neon accents along the stream. The diorama sits as a low horizontal landscape spanning the full width of the frame, with a dark teal background above it. High-end macro miniature craft. Absolutely no text, no letters, no numbers, no typography, no writing, no watermark anywhere in the image.",
+      "aspect_ratio": "21:9",
+      "resolution": "2K",
+      "output_file": "15-forest.jpg"
+    },
+    {
+      "prompt": "A miniature pop-up book diorama rising from the pages of an open book: a tiny layered paper city block of miniature buildings with glowing windows, a small cobbled street with a curved bridge over a narrow canal, tiny street lamps and miniature trees, tilt-shift miniature-photography look with soft depth-of-field blur, warm golden light from the upper left, subtle teal neon accents along the canal. The diorama sits as a low horizontal landscape spanning the full width of the frame, with a dark teal background above it. High-end macro miniature craft. Absolutely no text, no letters, no numbers, no typography, no writing, no signage, no watermark anywhere in the image.",
+      "aspect_ratio": "21:9",
+      "resolution": "2K",
+      "output_file": "15-city.jpg"
+    },
+    {
+      "prompt": "A miniature pop-up book diorama rising from the pages of an open book: a tiny layered paper coastline with a small striped lighthouse on a rocky headland, a miniature wooden pier, a tiny sailboat and gently folded paper waves, tilt-shift miniature-photography look with soft depth-of-field blur, warm golden light from the upper left, subtle teal neon accents on the water. The diorama sits as a low horizontal landscape spanning the full width of the frame, with a dark teal background above it. High-end macro miniature craft. Absolutely no text, no letters, no numbers, no typography, no writing, no watermark anywhere in the image.",
+      "aspect_ratio": "21:9",
+      "resolution": "2K",
+      "output_file": "15-coast.jpg"
+    }
+  ]
+}

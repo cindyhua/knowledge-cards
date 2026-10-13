@@ -1,0 +1,60 @@
+{
+  "id": "STYLE-03",
+  "name": "极简黑白风",
+  "oneLine": "纯白底 + 纯黑封面 + 超粗黑体，只有荧光绿一个强调，细线引语",
+  "bestFor": "观点输出、争议话题、需要一眼抓住注意力的内容",
+  "canvas": { "width": 1080, "height": 1440 },
+  "supportedCanvas": [[1080, 1440], [1080, 1080]],
+  "colors": {
+    "paper": "#FFFFFF",
+    "ink": "#000000",
+    "accent": "#000000",
+    "muted": "#6E6E6E",
+    "hairline": "#D8D8D8",
+    "quote": "#F4F4F4",
+    "body": "#1A1A1A",
+    "titleCn": "#3D3D3D",
+    "ghost": "#EFEFEF",
+    "ghostCover": "#1A1A1A",
+    "coverSub": "#8A8A8A",
+    "coverRule": "#2E2E2E",
+    "coverDim": "#7A7A7A",
+    "tocText": "#D2D2D2",
+    "footMuted": "#6E6E6E",
+    "onAccent": "#FFFFFF",
+    "onAccentMuted": "#C8C8C8",
+    "coverAccent": "#CCFF00"
+  },
+  "fonts": {
+    "serif": "'Noto Sans SC','Source Han Sans SC',Arial,'Microsoft YaHei',sans-serif",
+    "sans": "'Noto Sans SC','Source Han Sans SC','Microsoft YaHei',sans-serif",
+    "mono": "'Consolas','Courier New','Noto Sans SC',monospace"
+  },
+  "type": {
+    "coverTitle": 118,
+    "coverSub": 29,
+    "title": 68,
+    "titleCn": 30,
+    "body": 25,
+    "keys": 24,
+    "quote": 28,
+    "kicker": 18,
+    "folio": 18,
+    "label": 17,
+    "metaVal": 26,
+    "itemTitle": 30,
+    "itemDesc": 24,
+    "qaText": 28,
+    "lead": 24
+  },
+  "variants": {
+    "coverBg": "ink",
+    "quoteStyle": "rule",
+    "radius": 0,
+    "mono": true,
+    "ruleWeight": 8,
+    "titleWeight": 900,
+    "titleLetterSpacing": "-0.03em",
+    "metaBorder": 4
+  }
+}

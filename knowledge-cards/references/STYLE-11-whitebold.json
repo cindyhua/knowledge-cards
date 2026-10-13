@@ -1,0 +1,76 @@
+{
+  "id": "STYLE-11",
+  "name": "白底撞色巨字",
+  "oneLine": "纯白底 + 朱红超粗黑巨标题撞色，一处实色块点睛，底部黑条压住画面",
+  "bestFor": "教程、干货清单、观点短文。亮底在深色信息流里同样跳眼，且比深底更显干净。",
+  "canvas": {
+    "width": 1080,
+    "height": 1440
+  },
+  "supportedCanvas": [
+    [
+      1080,
+      1440
+    ],
+    [
+      1080,
+      1080
+    ]
+  ],
+  "canvasNote": "亮底对低亮度手机屏友好，但信息流缩略图里亮底容易糊——标题必须够大、撞色必须够狠。",
+  "colors": {
+    "paper": "#FFFFFF",
+    "ink": "#14110D",
+    "accent": "#E6392B",
+    "muted": "#6B645B",
+    "hairline": "#E6E2D9",
+    "quote": "#FFF1ED",
+    "body": "#2F2B25",
+    "titleCn": "#5C564D",
+    "onAccent": "#FFFFFF",
+    "footMuted": "#8A8378"
+  },
+  "fonts": {
+    "serif": "'Noto Serif SC','Source Han Serif SC','Songti SC',serif",
+    "sans": "'Noto Sans SC','Source Han Sans SC','Microsoft YaHei',sans-serif"
+  },
+  "type": {
+    "posterTitle": 178,
+    "posterSub": 33,
+    "posterKicker": 22,
+    "posterTag": 22,
+    "posterPadX": 72,
+    "posterPadY": 78,
+    "posterPadB": 66,
+    "body": 26,
+    "title": 60,
+    "titleCn": 33,
+    "keys": 25,
+    "quote": 28,
+    "kicker": 19,
+    "folio": 19,
+    "label": 17,
+    "metaVal": 27,
+    "itemTitle": 31,
+    "itemDesc": 25,
+    "qaText": 28,
+    "lead": 25
+  },
+  "variants": {
+    "posterBg": "#FFFFFF",
+    "posterInk": "#14110D",
+    "posterInkMuted": "#6B645B",
+    "posterSealBg": "#14110D",
+    "posterSealInk": "#FFFFFF",
+    "posterTexture": "paper",
+    "posterRuleW": 260,
+    "posterRuleH": 14,
+    "quoteStyle": "high",
+    "metaLayout": "stack",
+    "secLabel": "underline",
+    "bulletShape": "dash",
+    "radius": 0,
+    "ruleWeight": 4
+  },
+  "_note": "印章改用墨黑而不是朱红——朱红已经被标题的撞色和色块用掉了，一处强调原则要求它只出现一次。"
+}
