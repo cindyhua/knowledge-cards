@@ -121,6 +121,17 @@ const posterInk = vd('posterInk', C.ink);
 const posterInkMuted = vd('posterInkMuted', C.muted);
 const posterSealBg = vd('posterSealBg', C.accent);
 const posterSealInk = vd('posterSealInk', C.onAccent || C.paper);
+/* A seal's top line is a numeral in most styles but a two-character word in others. Two CJK glyphs
+ * at the default 52px are 104px wide inside a 118px box, which reads as cramped, so the size has
+ * to be adjustable per style rather than fixed. */
+const posterSealNumSize = vd('posterSealNumSize', 52);
+/* The offset "lift" layer behind a headline. The sticker recipe wants a hard vermilion copy of the
+ * glyph nudged down-right, not a blurred shadow, so the colour and the offset are both tokens. */
+const posterShadowColor = vd('posterShadowColor', 'rgba(0,0,0,.34)');
+const posterShadowOffset = vd('posterShadowOffset', '.05em');
+/* The rule under the headline: solid, dashed, or a hand-drawn wobble. */
+const posterRuleStyle = vd('posterRuleStyle', 'solid');  // solid | dashed | wavy
+const posterTitleRotate = vd('posterTitleRotate', 0);
 const posterRuleW = vd('posterRuleW', 220);
 const posterRuleH = vd('posterRuleH', 12);
 // The bold part of a tag is the hook, so it must stay the highest-contrast ink on the ground.
@@ -130,21 +141,121 @@ const posterArtH = vd('posterArtH', 520);
 // A 3:4 source cropped to a ~2:1 band throws away over half the height, and a centred crop decapitates
 // subjects that sit in the upper third. Focal point has to be per-style, not a fixed default.
 const posterArtPosition = vd('posterArtPosition', 'center 34%');
+/* Fade the bottom of the band into the ground. A photo band on a dark ground shows a hard seam
+ * where the image ends; the seam is what makes it look pasted on rather than lit from within.
+ * 0 = hard edge (the default, and what the flat-illustration styles want). */
+const posterArtFade = vd('posterArtFade', 0);
+const artFadeCss = posterArtFade > 0
+  ? `-webkit-mask-image:linear-gradient(to bottom,#000 0,#000 calc(100% - ${posterArtFade}px),transparent 100%);` +
+    `mask-image:linear-gradient(to bottom,#000 0,#000 calc(100% - ${posterArtFade}px),transparent 100%);`
+  : '';
+const titleEffect = vd('titleEffect', '');           // ''|lift|outline|shadow|extrude|neon|glow|halo
+const posterFlow = vd('posterFlow', 'bottom');       // bottom | top
+const posterTitleWeight = vd('posterTitleWeight', 900);
+const posterTitleLS = vd('posterTitleLS', '-0.028em');
+/* Outline width has to be tuned per weight AND per face. 2.6px over a 900-weight CJK sans fills the
+   counters and the glyphs fuse into a wireframe mess. The serif face has thin/thick contrast and
+   open counters, so the same treatment reads as a calligraphic outline instead of a blob. */
+const posterTitleFamily = vd('posterTitleFamily', F.sans);
+const posterOutlineW = vd('posterOutlineW', 2.6);
+const posterTagStyle = vd('posterTagStyle', 'plain');  // plain | chip
+const posterRuleOpacity = vd('posterRuleOpacity', 1);
+/* 3-D extrusion for the "hard-core type" treatment. The depth cannot come from a blurred shadow —
+ * a blur reads as a drop shadow, which the recipe forbids; it has to come from a stack of hard
+ * offsets of the same glyph, so the side of the block stays crisp. */
+const posterExtrudeStep = vd('posterExtrudeStep', 4);
+const posterExtrudeLayers = vd('posterExtrudeLayers', 8);
+const posterExtrudeColor = vd('posterExtrudeColor', C.accent);
+const extrudeShadow = (() => {
+  const parts = [];
+  for (let i = posterExtrudeLayers; i >= 1; i--) {
+    parts.push(`${i * posterExtrudeStep}px ${i * posterExtrudeStep}px 0 ${posterExtrudeColor}`);
+  }
+  return parts.join(',');
+})();
+/* Neon and cinematic glow. The halo is what sells a lit tube, so the letter keeps its own fill and
+ * only the halo changes colour — that keeps the "one accent" budget intact. */
+const posterNeonA = vd('posterNeonA', '#00E5FF');
+const posterNeonB = vd('posterNeonB', '#FF2E9A');
+const posterGlowColor = vd('posterGlowColor', C.accent);
+/* A light halo behind dark type, for headlines that sit on a busy ground. The halo is the same
+ * colour as the ground, so it reads as air around the letters rather than a second accent. */
+const posterHaloColor = vd('posterHaloColor', 'rgba(255,255,255,.95)');
+/* The rule and the subtitle are separate tokens because the brand-launch recipe wants the rule in
+ * the accent colour while the subtitle stays in the muted ink. */
+const posterRuleColor = vd('posterRuleColor', posterInk);
+/* A raw "#" inside a data URI starts a URL fragment, so the SVG loads as nothing and the rule
+ * silently disappears. The colour has to be percent-encoded before it goes in. */
+const svgColor = String(posterRuleColor).replace(/#/g, '%23');
+const posterSubFamily = vd('posterSubFamily', F.sans);
+const posterOutlineColor = vd('posterOutlineColor', posterInk);
+/* Step strip: 'rule' is a ruled timeline, 'flow' is a lit pipeline with the connector running
+ * through the numerals. */
+const posterStepsStyle = vd('posterStepsStyle', 'rule');  // rule | flow
+/* Sample matrix: a wall of framed tiles. */
+const posterGridCols = vd('posterGridCols', 3);
+const posterGridTilt = vd('posterGridTilt', 1.4);
+const posterGridGap = vd('posterGridGap', 22);
+const posterGridFrame = vd('posterGridFrame', C.ink);
+const posterGridBg = vd('posterGridBg', C.paper);
+const posterGridInk = vd('posterGridInk', C.ink);
+/* Optional per-tile tints for the sample matrix. One flat colour for every tile reads as a table;
+ * giving each tile its own soft wash reads as a wall of different works. */
+const posterGridTints = vd('posterGridTints', null);
+/* A gradient ground, for the styles whose recipe calls for a warm-to-light sweep. */
+const posterBgGradient = vd('posterBgGradient', null);
+/* Treatment of the illustration band. 'sketch' drains the colour and adds paper warmth so a flat
+ * 3-D render reads as a hand-coloured line drawing on kraft paper. */
+const posterArtFilter = vd('posterArtFilter', 'none');  // none | sketch | duo
+const artFilterCss = {
+  none: '',
+  sketch: 'filter:saturate(.05) contrast(1.72) brightness(1.04)',
+  duo: 'filter:grayscale(1) contrast(1.12) brightness(1.04)',
+}[posterArtFilter] || '';
 const NOISE_SVG =
   "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'>" +
   "<filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' " +
   "stitchTiles='stitch'/></filter><rect width='220' height='220' filter='url(%23n)'/></svg>";
-const posterTexture = {
-  none: '',
-  grain: `background-image:url("${NOISE_SVG}");background-size:220px 220px;opacity:.5`,
-  paper: `background-image:repeating-linear-gradient(90deg,rgba(0,0,0,.05) 0 1px,` +
-         `transparent 1px 9px),repeating-linear-gradient(0deg,rgba(0,0,0,.05) 0 1px,` +
-         `transparent 1px 9px)`,
-  glow: `background-image:radial-gradient(circle at 52% 40%,${C.accent}55,transparent 62%)`,
-}[vd('posterTexture', 'grain')] || '';
-
+const posterBokeh = vd('posterBokeh', null);
+/* Soft out-of-focus colour fields. A real "blurred photo" background needs a photo; what actually
+ * carries the style is the same thing a defocused lens produces — big overlapping washes of warm
+ * light with no hard edge anywhere. */
+const bokehImage = Array.isArray(posterBokeh) && posterBokeh.length
+  ? posterBokeh.map(([x, y, s, col]) =>
+      `radial-gradient(circle at ${x}% ${y}%, ${col} 0 ${s}%, transparent ${s + 15}%)`).join(',')
+  : '';
+/* Each texture contributes one background-image layer. A style may ask for several at once — a
+ * grainy ground with a light pool in the middle, say — and they have to be merged into a single
+ * background-image list, because a second background-image declaration would drop the first. */
+const POSTER_TEXTURES = {
+  none: { image: '' },
+  grain: { image: `url("${NOISE_SVG}")`, size: '220px 220px', opacity: '.5' },
+  paper: { image: `repeating-linear-gradient(90deg,rgba(0,0,0,.05) 0 1px,transparent 1px 9px),` +
+                  `repeating-linear-gradient(0deg,rgba(0,0,0,.05) 0 1px,transparent 1px 9px)` },
+  glow: { image: `radial-gradient(circle at ${vd('posterGlowAt', '52% 40%')},${C.accent}55,transparent 62%)` },
+  bokeh: { image: bokehImage },
+  grid: { image: `repeating-linear-gradient(0deg,${C.accent}1f 0 2px,transparent 2px 48px),` +
+                  `repeating-linear-gradient(90deg,${C.accent}1f 0 2px,transparent 2px 48px),` +
+                  `radial-gradient(circle at 50% 26%,${C.accent}30,transparent 64%)` },
+};
+const posterTexture = (() => {
+  const raw = vd('posterTexture', 'grain');
+  const names = Array.isArray(raw) ? raw : [raw];
+  const picked = names.map((n) => POSTER_TEXTURES[n]).filter(Boolean);
+  if (!picked.length) return '';
+  const images = picked.map((t) => t.image).filter(Boolean).join(',');
+  const sizes = picked.map((t) => t.size).filter(Boolean).join(',');
+  const op = picked.map((t) => t.opacity).filter(Boolean).pop() || '';
+  return `background-image:${images}` + (sizes ? `;background-size:${sizes}` : '') +
+    (op ? `;opacity:${op}` : '');
+})();
 const onAccent = C.onAccent || C.paper;
 const onAccentMuted = C.onAccentMuted || onAccent;
+/* A solid block behind a keyword usually wants its own pair, not the accent: the "sticker" styles
+ * put a deep-brown block on an orange ground and keep vermilion for the corner seal, and tying
+ * both to colors.accent would collapse them into one colour. */
+const posterBlkBg = vd('posterBlkBg', C.accent);
+const posterBlkInk = vd('posterBlkInk', onAccent);
 
 const coverBgColor = coverBg === 'paper' ? C.paper : coverBg === 'accent' ? C.accent : C.ink;
 const coverText = coverBg === 'paper' ? C.ink : onAccent;
@@ -403,29 +514,43 @@ ul.keys.num li::before{content:attr(data-i);width:auto;height:auto;top:.1em;back
  * content column is only ~936px wide, so 3-4 CJK glyphs per line caps a legible glyph height near
  * 230px. Vertical covers get their punch from column count and contrast, not raw size alone.
  */
-.card.poster{padding:0;background:${posterBg}}
+.card.poster{padding:0;background:${posterBgGradient ? `linear-gradient(${posterBgGradient})` : posterBg}}
 .poster .wrap{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;
               padding:${T.posterPadY || 80}px ${T.posterPadX || 72}px ${T.posterPadB || 66}px}
 .poster .tex{position:absolute;inset:0;z-index:1;${posterTexture}}
 .poster .kicker{font:700 ${T.posterKicker || 22}px/1 ${labelStack};letter-spacing:.22em;
                 color:${posterInkMuted}}
 .poster .seal{position:absolute;right:${T.posterPadX || 72}px;top:${T.posterPadY || 80}px;
-              width:118px;height:118px;display:flex;flex-direction:column;align-items:center;
-              justify-content:center;text-align:center;background:${posterSealBg};
+              width:118px;height:118px;background:${posterSealBg};
               color:${posterSealInk};transform:rotate(-6deg);flex:0 0 auto}
-.poster .seal .sn{font-family:${F.serif};font-weight:900;font-size:52px;line-height:1}
-.poster .seal .sl{font:700 17px/1 ${labelStack};letter-spacing:.14em;margin-top:9px}
+/* Absolute children, not a flex column: the flex version measured as zero-height in headless
+   Chrome and the numeral silently vanished while the caption below it survived. */
+.poster .seal .sn{position:absolute;left:0;right:0;top:${Math.round(posterSealNumSize * 0.46)}px;text-align:center;
+                  font-family:${F.serif};font-weight:900;font-size:${posterSealNumSize}px;line-height:1;
+                  color:${posterSealInk}}
+.poster .seal .sl{position:absolute;left:0;right:0;bottom:22px;text-align:center;
+                  font:700 17px/1 ${labelStack};letter-spacing:.14em;color:${posterSealInk}}
 /* CJK glyphs fill nearly the whole em box, so a landscape-derived 1.04 line-height reads as
    three rows fused into one block. 1.16 buys the breathing room the type needs to stay legible
    as separate lines. */
-.poster .title{font-family:${F.sans};font-weight:900;font-size:${T.posterTitle || 210}px;
-               line-height:1.16;letter-spacing:-.028em;color:${posterInk};margin-top:auto}
+.poster .title{font-family:${posterTitleFamily};font-weight:${posterTitleWeight};
+               font-size:${T.posterTitle || 210}px;
+               line-height:1.16;letter-spacing:${posterTitleLS};color:${posterInk};margin-top:auto}
+/* flow-top drops the headline right under the eyebrow and lets the tag strip sink to the floor,
+   which turns the middle of the frame into deliberate empty space — the minimal-poster look. */
+.poster.flow-top .title{margin-top:${T.posterTitleTop || 130}px}
 .poster .title .hi{color:${C.accent}}
-.poster .title .blk{display:inline-block;background:${C.accent};color:${onAccent};
+.poster .title .blk{display:inline-block;background:${posterBlkBg};color:${posterBlkInk};
                     padding:.02em .1em;margin:0 -.02em}
 .poster .rule{width:${posterRuleW || 220}px;height:${posterRuleH || 12}px;
-              background:${posterInk};margin-top:44px;flex:0 0 auto}
-.poster .sub{font-family:${F.sans};font-weight:500;font-size:${T.posterSub || 34}px;
+              background:${posterRuleColor};opacity:${posterRuleOpacity};margin-top:44px;flex:0 0 auto}
+/* A dashed rule reads as ruled-not-drawn; a wavy one reads as a marker stroke. Both are the same
+ * element with a different paint, so they stay tokens instead of new blocks. */
+.poster.rule-dashed .rule{background:none;height:0;border-top:${Math.max(3, Math.round((posterRuleH || 12) * 0.42))}px dashed ${posterRuleColor}}
+.poster.rule-wavy .rule{background:none;height:${posterRuleH || 12}px;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='12' viewBox='0 0 240 12'><path d='M0 7 Q30 1 60 7 T120 7 T180 7 T240 7' fill='none' stroke='${svgColor}' stroke-width='5' stroke-linecap='round'/></svg>");
+  background-size:120px 12px;background-repeat:repeat-x;background-position:left center;opacity:.9}
+.poster .sub{font-family:${posterSubFamily};font-weight:500;font-size:${T.posterSub || 34}px;
              line-height:1.55;color:${posterInkMuted};margin-top:38px;max-width:820px;flex:0 0 auto}
 .poster .tags{margin-top:auto;padding-top:34px;border-top:${posterRuleH || 12}px solid ${posterInk};
               display:flex;flex-wrap:wrap;gap:14px 30px;flex:0 0 auto}
@@ -433,13 +558,76 @@ ul.keys.num li::before{content:attr(data-i);width:auto;height:auto;top:.1em;back
                    color:${posterInkMuted}}
 .poster .tags span b{color:${posterTagInk};font-weight:800}
 
+/* Type treatments that separate a headline from its ground without adding a second colour.
+   text-shadow with a zero blur radius is the only one that survives multi-line headlines:
+   pseudo-element layers would need one per line, and -webkit-text-stroke cannot be offset. */
+.poster .title.e-lift{text-shadow:.042em .05em 0 ${C.accent}}
+.poster .title.e-outline{color:transparent;-webkit-text-stroke:${posterOutlineW}px ${posterOutlineColor}}
+.poster .title.e-outline .hi{-webkit-text-stroke:${posterOutlineW}px ${C.accent};color:transparent}
+/* A solid block inside an outlined headline keeps its own fill — the stroke would otherwise cut
+ * holes through the block's lettering. */
+.poster .title.e-outline .blk{-webkit-text-stroke:0}
+.poster .title.e-shadow{text-shadow:${posterShadowOffset} ${posterShadowOffset} 0 ${posterShadowColor}}
+/* A solid block inside a shadowed headline keeps its own face — the offset copy would otherwise
+ * read as a second, misregistered block. */
+.poster .title.e-shadow .blk{text-shadow:none}
+/* A hand-placed headline: a degree of tilt is what separates "typed" from "put down by hand". */
+.poster .title.tilt{transform:rotate(${posterTitleRotate}deg);transform-origin:left center}
+/* 3-D block: a stack of hard offsets of the same glyph, no blur anywhere. */
+.poster .title.e-extrude{text-shadow:${extrudeShadow}}
+/* Neon tube: the halo carries the light, the fill stays put. */
+.poster .title.e-neon{text-shadow:0 0 .05em ${posterNeonA},0 0 .12em ${posterNeonA},
+                      0 0 .28em ${posterNeonB},0 0 .5em ${posterNeonB}}
+/* Cinematic glow: one soft halo in the accent, no second colour. */
+.poster .title.e-glow{text-shadow:0 0 .10em ${posterGlowColor},0 0 .30em ${posterGlowColor}}
+/* Halo: air around the letters, in the colour of the ground, for headlines on a busy ground. */
+.poster .title.e-halo{text-shadow:0 0 .05em ${posterHaloColor},0 0 .12em ${posterHaloColor},
+                      0 0 .24em ${posterHaloColor}}
+
+/* Chip-style tag pills for the "four badges" layouts. */
+.poster.tags-chip .tags{gap:12px}
+.poster.tags-chip .tags span{border:2px solid ${posterInkMuted};border-radius:999px;padding:10px 20px}
+
+/* Bottom timeline of hollow wireframe numerals — the step sequence reads as rhythm, not as a
+   numbered list, and hollow numbers keep it from competing with the headline. */
+.poster .steps{margin-top:42px;padding-top:28px;position:relative;display:flex;gap:40px;flex:0 0 auto}
+.poster .steps::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;
+                       background:${posterInk};opacity:.45}
+.poster .sstep{flex:1 1 0}
+.poster .sn{font-family:${F.serif};font-weight:900;font-size:58px;line-height:1;letter-spacing:.02em;
+            color:transparent;-webkit-text-stroke:2.4px ${posterInk}}
+.poster .st{font:600 25px/1.4 ${F.sans};color:${posterInkMuted};margin-top:14px}
+
+/* "flow" turns the strip into a lit pipeline: the connector runs through the middle of the
+ * numerals instead of sitting above them, and each node carries its own halo. */
+.poster.steps-flow .steps{padding-top:0}
+.poster.steps-flow .steps::before{top:29px;height:4px;opacity:1;
+  background:linear-gradient(90deg,transparent,${posterInk} 10%,${posterInk} 90%,transparent);
+  box-shadow:0 0 18px ${posterGlowColor}}
+.poster.steps-flow .sn{color:${C.accent};-webkit-text-stroke:0;
+  text-shadow:0 0 18px ${C.accent};position:relative;z-index:1}
+.poster.steps-flow .st{margin-top:12px}
+
+/* Sample matrix: a wall of small framed works, each tilted a degree off square. The tilt is what
+ * stops it reading as a table — a straight grid of equal cells is exactly the PPT tell that got
+ * styles 02-05 thrown out. */
+.poster .grid{margin-top:38px;display:grid;grid-template-columns:repeat(${posterGridCols},1fr);
+  gap:${posterGridGap}px;flex:0 0 auto;perspective:1000px}
+.poster .gcell{position:relative;aspect-ratio:4/5;background:${posterGridBg};
+  border:4px solid ${posterGridFrame};box-shadow:0 12px 28px rgba(0,0,0,.24);
+  display:flex;align-items:center;justify-content:center;overflow:hidden}
+.poster .gcell::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(140deg,rgba(255,255,255,.34),transparent 58%)}
+.poster .gcell span{position:relative;z-index:1;font:800 25px/1.25 ${labelStack};
+  letter-spacing:.05em;color:${posterGridInk};text-align:center;padding:0 12px}
+
 /* Illustration band across the top; the headline block drops below it. The band is a hard crop
    rather than a framed picture because a cover reads at thumbnail size — a boxed image competes
    with the type, while a full-bleed band just reads as colour and shape. */
 .poster.hasart .wrap{padding-top:0}
-.poster .artbox{position:absolute;left:0;right:0;top:0;height:${posterArtH}px;z-index:2;overflow:hidden}
+.poster .artbox{position:absolute;left:0;right:0;top:0;height:${posterArtH}px;z-index:2;overflow:hidden;${artFadeCss}}
 .poster .artbox img{width:100%;height:100%;object-fit:cover;display:block;
-                    object-position:${posterArtPosition}}
+                    object-position:${posterArtPosition};${artFilterCss}}
 .poster.hasart .kicker{margin-top:${posterArtH + 44}px}
 .poster.hasart .seal{top:${posterArtH + 36}px}
 `;
@@ -500,13 +688,29 @@ const BLOCKS = {
       ? `<div class="tags">${card.tags.map((t) => `<span>${t}</span>`).join('')}</div>`
       : '';
     const sub = card.sub ? `<div class="sub">${esc(card.sub)}</div>` : '';
+    const steps = (card.steps || []).length
+      ? `<div class="steps">${card.steps.map(([n, t]) =>
+          `<div class="sstep"><div class="sn">${esc(n)}</div><div class="st">${esc(t)}</div></div>`
+        ).join('')}</div>`
+      : '';
+    const grid = (card.grid || []).length
+      ? `<div class="grid">${card.grid.map((t, i) => {
+          const tilt = posterGridTilt ? (i % 2 ? posterGridTilt : -posterGridTilt) : 0;
+          const tint = Array.isArray(posterGridTints) && posterGridTints.length
+            ? posterGridTints[i % posterGridTints.length] : null;
+          return `<div class="gcell" style="transform:rotate(${tilt}deg)` +
+            `${tint ? `;background:${tint}` : ''}"><span>${esc(t)}</span></div>`;
+        }).join('')}</div>`
+      : '';
+    const titleCls = `title${titleEffect ? ' e-' + titleEffect : ''}` +
+      `${posterTitleRotate ? ' tilt' : ''}`;
     return (
       `<div class="tex"></div><div class="wrap">` +
       (card.kicker ? `<div class="kicker">${esc(card.kicker)}</div>` : '') +
       seal +
-      `<div class="title">${lines}</div>` +
+      `<div class="${titleCls}">${lines}</div>` +
       (card.rule === false ? '' : `<div class="rule"></div>`) +
-      sub + tags + `</div>`
+      sub + grid + steps + tags + `</div>`
     );
   },
 
@@ -644,6 +848,11 @@ function renderCard(card, index, total, baseDir, injectProbe) {
   // absent, so the hasart offsets (.poster.hasart .kicker / .seal) would still reserve
   // posterArtH px above the headline — a cover with a hole where the illustration should be.
   const cls = `card${isCover ? ' cover' : ''}${isPoster ? ' poster' : ''}` +
+    `${isPoster && posterFlow === 'top' ? ' flow-top' : ''}` +
+    `${isPoster && posterTagStyle === 'chip' ? ' tags-chip' : ''}` +
+    `${isPoster && posterStepsStyle === 'flow' ? ' steps-flow' : ''}` +
+    `${isPoster && posterRuleStyle === 'dashed' ? ' rule-dashed' : ''}` +
+    `${isPoster && posterRuleStyle === 'wavy' ? ' rule-wavy' : ''}` +
     `${art ? ' hasart' : ''}`;
   return (
     `<!doctype html><html><head><meta charset="utf-8"><style>${CSS}</style></head>` +
