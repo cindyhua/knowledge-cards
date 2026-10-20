@@ -101,7 +101,8 @@ description: |
 「新增一套风格」一节。三条最容易做错的：
 
 1. **不要先给编号**。编号库的规矩是先出样张、用户认可后才分配。用户没看过成图，
-   不要急着回「好，创建 STYLE-16」。下一个可用编号是 `16`，`02`–`05` 作废且不复用。
+   不要急着回「好，创建 STYLE-31」。下一个可用编号是 `31`，`02`–`05` 作废且不复用，
+   `07`–`30` 都已登记（`07`–`09` 和 `16`–`30` 是候选，`10`–`15` 已启用）。
 2. **照抄 token 字段结构**。新风格通常只换 `colors` + `type` 两个段，
    别自己发明新字段 —— 渲染器只认 `STYLE-01-editorial.json` 里有的那些。
 3. **做完必须 commit + push**。skill 目录本身是 git 工作区，
@@ -112,7 +113,8 @@ cd ~/.minimax/skills/knowledge-cards
 git add -A && git commit -m "Add STYLE-NN <name>" && git push
 ```
 
-用户想看长什么样可以直接翻 [`docs/style-gallery.md`](docs/style-gallery.md)（15 套并排成图）。
+用户想看长什么样可以直接翻 [`docs/style-gallery.md`](docs/style-gallery.md)（15 套已启用并排成图），
+新候选看 [`docs/candidates/overview-16-30.jpg`](docs/candidates/overview-16-30.jpg)（`16`–`30` 共 15 套）。
 
 ## Failure handling
 

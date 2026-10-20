@@ -279,6 +279,48 @@ FAIL 00-cover    0 bytes  ⚠ ART MISSING — png deleted
 | `posterInk` / `posterInkMuted` | 标题与次要文字色。独立于 `colors.ink`（那个是按纸底调的） |
 | `posterTagInk` | 标签里 `<b>` 的颜色。亮底风格必调，否则白字压在橙底上看不清 |
 | `posterSealBg` / `posterSealInk` | 印章配色 |
-| `posterTexture` | `none` / `grain`（胶片噪点）/ `paper`（纸纹网格）/ `glow`（径向光晕） |
+| `posterSealNumSize` | 印章里的数字字号。默认 52px，两个中文字会挤（104px 塞进 118px 的章） |
+| `posterBlkBg` / `posterBlkInk` | 标题里 `<span class="blk">` 的色块底色与字色。默认取 `colors.accent` |
+| `posterTexture` | `none` / `grain`（胶片噪点）/ `paper`（纸纹网格）/ `glow`（径向光晕）/ `bokeh`（散景）/ `grid`（网格+光晕）。**可以写成数组**，多层会合成到同一个 `background-image` 里 |
+| `posterGlowAt` | `glow` 纹理的光晕位置，默认 `52% 40%` |
+| `posterBokeh` | `[[x%, y%, 半径%, 颜色], ...]`，散景光斑。纯 CSS 渐变堆出来，不依赖照片 |
 | `posterArtH` / `posterArtPosition` | 插画带高度与裁切焦点 |
+| `posterArtFade` | 插画带底部渐隐进底色的像素数。默认 0 = 硬边；照片带配深底必须开，否则会看到一条接缝 |
+| `posterArtFilter` | `none` / `sketch`（去色+提对比，3D 渲染变手绘线稿）/ `duo`（纯灰度） |
 | `posterRuleW` / `posterRuleH` | 标题下色条尺寸 |
+| `posterRuleColor` | 色条颜色，默认跟标题同色 |
+| `posterRuleStyle` | `solid` / `dashed` / `wavy`（手绘抖线） |
+| `posterRuleOpacity` | 色条不透明度 |
+| `posterTagStyle` | `plain` / `chip`（胶囊徽标） |
+| `posterFlow` | `bottom`（标题沉底，默认）/ `top`（标题紧跟眉题，中间留白） |
+| `posterTitleWeight` / `posterTitleLS` / `posterTitleFamily` | 标题字重 / 字距 / 字体栈 |
+| `posterTitleRotate` | 标题整体旋转角度（度） |
+| `posterSubFamily` | 副标题字体栈。学术/工业风用等宽，副标写英文才立得住 |
+| `posterStepsStyle` | `rule`（刻度时间线，默认）/ `flow`（发光管线，连线穿过数字） |
+| `posterGridCols` / `posterGridGap` / `posterGridTilt` | 样张矩阵的列数 / 间距 / 逐格错开角度 |
+| `posterGridFrame` / `posterGridBg` / `posterGridInk` | 样张矩阵的画框色 / 画芯底色 / 画芯字色 |
+| `posterGridTints` | 每格不同浅色渐变。全同色会立刻变回被否掉的 02–05 那种 PPT 表格 |
+| `posterBgGradient` | 额外叠一层底色渐变 |
+
+### 标题的特效（`titleEffect`）
+
+`''`（默认）/ `lift` / `outline` / `shadow` / `extrude` / `neon` / `glow` / `halo`。
+配套 token：`posterOutlineW`（描边粗细）、`posterOutlineColor`、`posterExtrudeStep` /
+`posterExtrudeLayers` / `posterExtrudeColor`、`posterNeonA` / `posterNeonB`、
+`posterGlowColor`、`posterHaloColor`、`posterShadowColor` / `posterShadowOffset`。
+
+两条实测出来的硬规矩：
+
+1. **描边必须配衬线体。** 思源黑体 900/700 的字腔太窄，2.6px 描边会把笔画全粘死成一团线框；
+   思源宋体 900 + 2px 才是书法味的空心字。所以 `18` 巨字宣言用 `posterTitleFamily` 换成宋体。
+2. **立体挤出不能靠模糊阴影。** 阴影读起来就是投影，而这套要的是「硬边挤出」——
+   渲染器用 N 层同色硬偏移叠出来，侧边才保持是硬的（`25` 硬核立体字）。
+
+### 插画带的渐隐与去色
+
+`posterArtFade` 给插画带底部加一段 mask 渐变。照片带贴在深底上时，不渐隐会看到一条
+硬接缝 —— 那道缝就是「贴上去的照片」的证据；渐隐之后带子和底色连成一片（`26` 电影光带）。
+纸感插画（`27` 铜版画）用小值（100–150px）就够，照片用 240–260px。
+
+`posterArtFilter: sketch` 把 3D 渲染去色提对比，套上牛皮纸底就读成手绘线稿（`29` 卡通素描），
+是「同一张素材当两种风格用」最省事的办法。

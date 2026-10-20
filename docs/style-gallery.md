@@ -151,6 +151,37 @@
 
 ---
 
+## 候选：`16`–`30`（2026-10-20 新增 15 套）
+
+从 topmind-cover 的 22 套配方移植过来的一批，**全部走 `poster` 版式，全部还是候选**。
+用户挑中哪几套再转正式启用。先看总览：
+
+![候选风格 16-30 总览](candidates/overview-16-30.jpg)
+
+| 编号 | 名称 | 一句话 | 成图 |
+|---|---|---|---|
+| `16` | 极简留白 | 米白底 + 大留白，朱红只点一个数字 | <img src="candidates/style-16-cover.jpg" width="150"> |
+| `17` | 新闻快讯 | 纸纹米底 + 纯黑巨字 + 右上角黑章 | <img src="candidates/style-17-cover.jpg" width="150"> |
+| `18` | 巨字宣言 | 描边宋体巨字 + 大量留白 | <img src="candidates/style-18-cover.jpg" width="150"> |
+| `19` | 教程步骤 | 巨字 + 底部线框数字时间线 | <img src="candidates/style-19-cover.jpg" width="150"> |
+| `20` | 纸感拼贴 | 马卡龙斜切色块 + 粉色印章 | <img src="candidates/style-20-cover.jpg" width="150"> |
+| `21` | 暗色 SaaS | 深海军蓝 + 玻璃胶囊标签 | <img src="candidates/style-21-cover.jpg" width="150"> |
+| `22` | 背景虚化 | 暖白散景底 + 墨黑巨字 | <img src="candidates/style-22-cover.jpg" width="150"> |
+| `23` | 品牌发布 | 深蓝底 + 荧光绿关键词块 | <img src="candidates/style-23-cover.jpg" width="150"> |
+| `24` | 贴纸潮玩 | 橙黄暖底 + 贴纸徽章 | <img src="candidates/style-24-cover.jpg" width="150"> |
+| `25` | 硬核立体字 | 混凝土底 + 硬边挤出 3D 巨字 | <img src="candidates/style-25-cover.jpg" width="150"> |
+| `26` | 电影光带 | 长曝光光带插画带 + 琥珀点睛 | <img src="candidates/style-26-cover.jpg" width="150"> |
+| `27` | 学术版画 | 铜版雕刻插图带 + 宋体巨标题 | <img src="candidates/style-27-cover.jpg" width="150"> |
+| `28` | 样张矩阵 | 一墙微倾的样张画框 | <img src="candidates/style-28-cover.jpg" width="150"> |
+| `29` | 卡通素描 | 牛皮纸底 + 去色线稿 + 描边标题 | <img src="candidates/style-29-cover.jpg" width="150"> |
+| `30` | 赛博霓虹 | 青品红双光晕标题 + 网格底纹 | <img src="candidates/style-30-cover.jpg" width="150"> |
+
+其中 `24`/`26`/`27`/`29` 是**插画型**，素材在 `assets/art-pool/`；
+其余是**纯文字海报**，不依赖素材，中文零风险。
+`26`/`27` 的插画是 AI 生成的（长曝光光带 / 铜版雕刻），换内容不用重新生图。
+
+---
+
 ## `02`–`05` 已作废
 
 这四套被判掉的原因是同一个：**版式太像 PPT / 报表**。留图是为了说明新风格为什么要避开那些做法，
