@@ -1,0 +1,48 @@
+{
+  "id": "STYLE-19",
+  "name": "教程步骤",
+  "oneLine": "宣纸米底 + 墨色巨字 + 底部赭石时间线，线框空心数字当节奏点",
+  "bestFor": "分步教程、上手指南、保姆级攻略。步骤不超过 3 个。",
+  "canvas": { "width": 1080, "height": 1440 },
+  "supportedCanvas": [[1080, 1440]],
+  "canvasNote": "steps 时间线占底部一条，标题区因此只剩约 700px，字号压到 144。步骤超过 3 个立刻变说明书。",
+  "colors": {
+    "paper": "#FFFFFF",
+    "ink": "#1C1A16",
+    "accent": "#B5651D",
+    "muted": "#6F6659",
+    "hairline": "#DCD3BF",
+    "quote": "#EDE5D2",
+    "body": "#332E26",
+    "titleCn": "#6B6255",
+    "onAccent": "#FFFFFF",
+    "footMuted": "#8A8171"
+  },
+  "fonts": {
+    "serif": "'Noto Serif SC','Source Han Serif SC','Songti SC',serif",
+    "sans": "'Noto Sans SC','Source Han Sans SC','Microsoft YaHei',sans-serif"
+  },
+  "type": {
+    "posterTitle": 144,
+    "posterSub": 30,
+    "posterKicker": 21,
+    "posterTag": 21,
+    "posterPadX": 74,
+    "posterPadY": 78,
+    "posterPadB": 66,
+    "body": 26,
+    "title": 62
+  },
+  "variants": {
+    "posterBg": "#F2EDE0",
+    "posterInk": "#1C1A16",
+    "posterInkMuted": "#6F6659",
+    "posterSealBg": "#B5651D",
+    "posterSealInk": "#FFFFFF",
+    "posterTexture": "paper",
+    "posterRuleW": 180,
+    "posterRuleH": 6,
+    "quoteStyle": "rule"
+  },
+  "_note": "spec 里用 steps 字段传 [[编号, 短句], ...]，渲染成底部横向时间线。数字是线框空心（-webkit-text-stroke），不是实心章。每行标题最多 4 个中文字，多了就换行断成孤字。"
+}

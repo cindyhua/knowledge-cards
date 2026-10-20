@@ -1,0 +1,70 @@
+{
+  "id": "STYLE-29",
+  "name": "卡通素描",
+  "oneLine": "牛皮纸底 + 手绘描边标题 + 马克笔高亮点题词 + 线稿感插画",
+  "bestFor": "创意、手作、轻松科普、幽默内容。亲切手作感。",
+  "canvas": {
+    "width": 1080,
+    "height": 1440
+  },
+  "supportedCanvas": [
+    [
+      1080,
+      1440
+    ]
+  ],
+  "canvasNote": "竖版专属。插画带用 13 号素材经 sketch 滤镜处理成线稿感，不用重新生图。",
+  "colors": {
+    "paper": "#DCC49A",
+    "ink": "#3A2A18",
+    "accent": "#FFD93B",
+    "muted": "#7A6448",
+    "hairline": "#C4A87A",
+    "quote": "#EFE0C2",
+    "body": "#4A3826",
+    "titleCn": "#6E5638",
+    "onAccent": "#3A2A18",
+    "footMuted": "#96795A"
+  },
+  "fonts": {
+    "serif": "'Noto Serif SC','Source Han Serif SC','Songti SC',serif",
+    "sans": "'Noto Sans SC','Source Han Sans SC','Microsoft YaHei',sans-serif"
+  },
+  "type": {
+    "posterTitle": 138,
+    "posterSub": 30,
+    "posterKicker": 21,
+    "posterTag": 21,
+    "posterPadX": 72,
+    "posterPadY": 78,
+    "posterPadB": 66,
+    "body": 26,
+    "title": 58
+  },
+  "variants": {
+    "posterBg": "#D9C098",
+    "posterInk": "#3A2A18",
+    "posterInkMuted": "#6E5638",
+    "posterSealBg": "#FF6B4A",
+    "posterSealInk": "#FFF4DC",
+    "posterTexture": [
+      "paper",
+      "grain"
+    ],
+    "titleEffect": "outline",
+    "posterOutlineColor": "#3A2A18",
+    "posterOutlineW": 3,
+    "posterTitleFamily": "'Noto Sans SC','Source Han Sans SC','Microsoft YaHei',sans-serif",
+    "posterTitleWeight": 800,
+    "posterTitleLS": "-0.01em",
+    "posterArtFilter": "sketch",
+    "posterArtH": 420,
+    "posterArtPosition": "center 38%",
+    "posterRuleW": 260,
+    "posterRuleH": 16,
+    "quoteStyle": "bar",
+    "posterTitleRotate": -1.2,
+    "posterRuleStyle": "wavy"
+  },
+  "_note": "描边字 + 描边字里垫的实色块是这套的核心：色块里的字取消描边（渲染器已单独处理），否则描边会把色块里的字戳出洞。马克笔黄是唯一跳色，只给点题词。"
+}

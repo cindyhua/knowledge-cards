@@ -1,0 +1,48 @@
+{
+  "id": "STYLE-17",
+  "name": "新闻快讯",
+  "oneLine": "纸纹米底 + 纯黑超大标题 + 朱红爆点词，底部一条硬黑线收口",
+  "bestFor": "资讯解读、热点复盘、行业快讯。要「刚刚发生」的现场感。",
+  "canvas": { "width": 1080, "height": 1440 },
+  "supportedCanvas": [[1080, 1440]],
+  "canvasNote": "标题用黑体 900，靠字重和纯黑/米白的最强反差取胜；爆点词只染红一个。",
+  "colors": {
+    "paper": "#FFFFFF",
+    "ink": "#0E0D0B",
+    "accent": "#E6392B",
+    "muted": "#6E6A62",
+    "hairline": "#D8D2C4",
+    "quote": "#EDE7D8",
+    "body": "#2A2620",
+    "titleCn": "#5E5A52",
+    "onAccent": "#FFFFFF",
+    "footMuted": "#8A8478"
+  },
+  "fonts": {
+    "serif": "'Noto Serif SC','Source Han Serif SC','Songti SC',serif",
+    "sans": "'Noto Sans SC','Source Han Sans SC','Microsoft YaHei',sans-serif"
+  },
+  "type": {
+    "posterTitle": 172,
+    "posterSub": 31,
+    "posterKicker": 21,
+    "posterTag": 21,
+    "posterPadX": 70,
+    "posterPadY": 76,
+    "posterPadB": 64,
+    "body": 26,
+    "title": 62
+  },
+  "variants": {
+    "posterBg": "#F2ECDD",
+    "posterInk": "#0E0D0B",
+    "posterInkMuted": "#6E6A62",
+    "posterSealBg": "#0E0D0B",
+    "posterSealInk": "#FFFFFF",
+    "posterTexture": "paper",
+    "posterRuleW": 100,
+    "posterRuleH": 8,
+    "quoteStyle": "bar"
+  },
+  "_note": "「绝不做底部胶囊标签条」的规矩在这里靠一条硬黑横线替代；爆点词用 <span class=\"hi\"> 染红，只染一个。"
+}

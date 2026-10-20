@@ -1,0 +1,53 @@
+{
+  "id": "STYLE-18",
+  "name": "巨字宣言",
+  "oneLine": "奶油亮底 + 墨黑巨字 + 烫金描边与一层错位立体，字即画面",
+  "bestFor": "观点评论、发布宣言、一句话立场。反常识断言最好用。",
+  "canvas": { "width": 1080, "height": 1440 },
+  "supportedCanvas": [[1080, 1440]],
+  "canvasNote": "描边和立体两种效果最多同时用一种，这里用 outline（描边）。加第三个阴影就会糊。",
+  "colors": {
+    "paper": "#FFFFFF",
+    "ink": "#14110D",
+    "accent": "#C9A227",
+    "muted": "#7A736A",
+    "hairline": "#E5DCC8",
+    "quote": "#F1E7D4",
+    "body": "#3A342B",
+    "titleCn": "#6B645A",
+    "onAccent": "#14110D",
+    "footMuted": "#8A8378"
+  },
+  "fonts": {
+    "serif": "'Noto Serif SC','Source Han Serif SC','Songti SC',serif",
+    "sans": "'Noto Sans SC','Source Han Sans SC','Microsoft YaHei',sans-serif"
+  },
+  "type": {
+    "posterTitle": 164,
+    "posterSub": 32,
+    "posterKicker": 21,
+    "posterTag": 21,
+    "posterPadX": 74,
+    "posterPadY": 80,
+    "posterPadB": 66,
+    "body": 26,
+    "title": 62
+  },
+  "variants": {
+    "posterBg": "#FAF3E7",
+    "posterInk": "#14110D",
+    "posterInkMuted": "#7A736A",
+    "posterSealBg": "#C9A227",
+    "posterSealInk": "#14110D",
+    "posterTexture": "paper",
+    "posterRuleW": 200,
+    "posterRuleH": 8,
+    "titleEffect": "outline",
+    "posterTitleFamily": "'Noto Serif SC','Source Han Serif SC','Songti SC',serif",
+    "posterTitleWeight": 900,
+    "posterTitleLS": "0.02em",
+    "posterOutlineW": 2,
+    "quoteStyle": "rule"
+  },
+  "_note": "描边用 -webkit-text-stroke，颜色取 posterInk，描边宽度固定 2.6px；烫金只用在印章和强调词上，不给整句。子元素 .hi 单独描金边，避免整句被描糊。"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "STYLE-24",
+  "name": "贴纸潮玩",
+  "oneLine": "橙黄暖渐变底 + 深棕巨标题（关键词压深棕块）+ 朱红圆章 + 贴纸式徽章",
+  "bestFor": "实战案例、数据战报、复盘连载。热闹、贴纸感、有个人 IP。",
+  "canvas": {
+    "width": 1080,
+    "height": 1440
+  },
+  "supportedCanvas": [
+    [
+      1080,
+      1440
+    ]
+  ],
+  "canvasNote": "竖版专属。插画带 21:9 横带裁成 1080×430 贴顶，复用 14 号的暖杏角色图。",
+  "colors": {
+    "paper": "#FFE9C4",
+    "ink": "#4A2C0A",
+    "accent": "#E6392B",
+    "muted": "#8A5A24",
+    "hairline": "#F0D3A0",
+    "quote": "#FFF3DC",
+    "body": "#5A3A14",
+    "titleCn": "#7A4E1E",
+    "onAccent": "#FFF3DC",
+    "footMuted": "#A8794A"
+  },
+  "fonts": {
+    "serif": "'Noto Serif SC','Source Han Serif SC','Songti SC',serif",
+    "sans": "'Noto Sans SC','Source Han Sans SC','Microsoft YaHei',sans-serif"
+  },
+  "type": {
+    "posterTitle": 150,
+    "posterSub": 30,
+    "posterKicker": 21,
+    "posterTag": 21,
+    "posterPadX": 72,
+    "posterPadY": 80,
+    "posterPadB": 66,
+    "body": 26,
+    "title": 58
+  },
+  "variants": {
+    "posterBg": "#FFC53D",
+    "posterBgGradient": "150deg, #FF9E2C 0%, #FFC53D 58%, #FFE08A 100%",
+    "posterInk": "#4A2C0A",
+    "posterInkMuted": "#6B3F10",
+    "posterSealBg": "#E6392B",
+    "posterSealInk": "#FFF3DC",
+    "posterBlkBg": "#4A2C0A",
+    "posterBlkInk": "#FFF3DC",
+    "posterTexture": [
+      "grain",
+      "glow"
+    ],
+    "posterRuleW": 190,
+    "posterRuleH": 12,
+    "posterTagStyle": "chip",
+    "posterTitleWeight": 900,
+    "posterTitleLS": "-0.026em",
+    "titleEffect": "shadow",
+    "posterArtH": 430,
+    "posterArtPosition": "center 40%",
+    "quoteStyle": "bar",
+    "posterShadowColor": "#E6392B",
+    "posterShadowOffset": ".03em"
+  },
+  "_note": "和 13 毛绒潮玩必须一眼分开：13 是薄荷奶油冷调 + 墨绿，24 是高饱和橙黄 + 深棕，且 24 多一整套贴纸徽章。深棕块 + 米白字是潮玩贴纸的核心手法。"
+}

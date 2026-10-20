@@ -1,0 +1,68 @@
+{
+  "id": "STYLE-30",
+  "name": "赛博霓虹",
+  "oneLine": "近黑底 + 霓虹双光晕标题（青+品红）+ 网格与故障底纹",
+  "bestFor": "AI 前沿、科幻、极客、游戏、未来科技。",
+  "canvas": {
+    "width": 1080,
+    "height": 1440
+  },
+  "supportedCanvas": [
+    [
+      1080,
+      1440
+    ]
+  ],
+  "canvasNote": "竖版专属。霓虹光晕用两层 text-shadow，避免单层过曝把字吃掉。",
+  "colors": {
+    "paper": "#0A0A0F",
+    "ink": "#F4F2FF",
+    "accent": "#FF2E9A",
+    "muted": "#8A8AA8",
+    "hairline": "#1E1E2E",
+    "quote": "#131320",
+    "body": "#D8D8E8",
+    "titleCn": "#9A9AB8",
+    "onAccent": "#0A0A0F",
+    "footMuted": "#6A6A88"
+  },
+  "fonts": {
+    "serif": "'Noto Serif SC','Source Han Serif SC','Songti SC',serif",
+    "sans": "'Noto Sans SC','Source Han Sans SC','Microsoft YaHei',sans-serif",
+    "mono": "'Consolas','Cascadia Mono','Courier New',monospace"
+  },
+  "type": {
+    "posterTitle": 146,
+    "posterSub": 27,
+    "posterKicker": 19,
+    "posterTag": 20,
+    "posterPadX": 72,
+    "posterPadY": 80,
+    "posterPadB": 66,
+    "body": 26,
+    "title": 58
+  },
+  "variants": {
+    "posterBg": "#0A0A0F",
+    "posterInk": "#F4F2FF",
+    "posterInkMuted": "#8A8AA8",
+    "posterSealBg": "#00E5FF",
+    "posterSealInk": "#0A0A0F",
+    "posterTexture": [
+      "grid",
+      "grain"
+    ],
+    "titleEffect": "neon",
+    "posterNeonA": "#00E5FF",
+    "posterNeonB": "#FF2E9A",
+    "posterRuleColor": "#FF2E9A",
+    "posterRuleW": 240,
+    "posterRuleH": 8,
+    "posterTagStyle": "chip",
+    "posterTitleWeight": 900,
+    "posterTitleLS": "-0.026em",
+    "quoteStyle": "bar",
+    "posterSealNumSize": 40
+  },
+  "_note": "霓虹色上限三种：青 + 品红 + 近黑。第三色（网格线）用 accent 品红压到极低透明度，只做底纹不抢标题。眉题走等宽字体才有终端感。"
+}

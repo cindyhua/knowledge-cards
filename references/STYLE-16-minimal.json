@@ -1,0 +1,53 @@
+{
+  "id": "STYLE-16",
+  "name": "极简留白",
+  "oneLine": "近乎全白底 + 极小深灰标题（字距拉开）+ 全图一处朱红点睛，大片空场",
+  "bestFor": "书评、随笔、一句话观点。气质安静、留白多，适合文字本身有分量的时候。",
+  "canvas": { "width": 1080, "height": 1440 },
+  "supportedCanvas": [[1080, 1440]],
+  "canvasNote": "极简靠字重和字距撑，不靠字号。字号只有 92px 左右，和其它海报差一个量级，这是刻意的。",
+  "colors": {
+    "paper": "#FFFFFF",
+    "ink": "#2B2B2B",
+    "accent": "#E6392B",
+    "muted": "#8A8A8A",
+    "hairline": "#EDEDED",
+    "quote": "#F5F5F5",
+    "body": "#3D3D3D",
+    "titleCn": "#6E6E6E",
+    "onAccent": "#FFFFFF",
+    "footMuted": "#9A9A9A"
+  },
+  "fonts": {
+    "serif": "'Noto Serif SC','Source Han Serif SC','Songti SC',serif",
+    "sans": "'Noto Sans SC','Source Han Sans SC','Microsoft YaHei',sans-serif"
+  },
+  "type": {
+    "posterTitle": 92,
+    "posterTitleTop": 190,
+    "posterSub": 30,
+    "posterKicker": 20,
+    "posterTag": 20,
+    "posterPadX": 86,
+    "posterPadY": 80,
+    "posterPadB": 70,
+    "body": 26,
+    "title": 62
+  },
+  "variants": {
+    "posterBg": "#FFFFFF",
+    "posterInk": "#2B2B2B",
+    "posterInkMuted": "#8A8A8A",
+    "posterSealBg": "#E6392B",
+    "posterSealInk": "#FFFFFF",
+    "posterTexture": "none",
+    "posterFlow": "top",
+    "posterTitleWeight": 500,
+    "posterTitleLS": "0.08em",
+    "posterRuleW": 90,
+    "posterRuleH": 6,
+    "titleEffect": "",
+    "quoteStyle": "rule"
+  },
+  "_note": "极简的冲击力全靠克制：只允许一处色块点睛，变色/描边/手绘一律不用。flow-top 让标题落在上三分之一，中间大片空场。字重降到 500、字距拉到 0.08em 是这套的命门，900 加负字距会立刻变回海报。"
+}

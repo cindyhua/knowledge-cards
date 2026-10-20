@@ -1,0 +1,110 @@
+{
+  "id": "STYLE-22",
+  "name": "背景虚化",
+  "oneLine": "暖白散景底 + 墨黑巨标题压清晰区，白色光晕衬底，一处暖橙点睛",
+  "bestFor": "生活方式、职场日常、氛围感选题。背景退到后面，标题站到前面。",
+  "canvas": {
+    "width": 1080,
+    "height": 1440
+  },
+  "supportedCanvas": [
+    [
+      1080,
+      1440
+    ]
+  ],
+  "canvasNote": "竖版专属。散景用纯 CSS 径向渐变堆出来，不依赖照片素材，换内容不用重新生图。",
+  "colors": {
+    "paper": "#F3F1EC",
+    "ink": "#1A1A1A",
+    "accent": "#FF8A3D",
+    "muted": "#8C8C8C",
+    "hairline": "#E4E0D8",
+    "quote": "#FFFFFF",
+    "body": "#2E2E2E",
+    "titleCn": "#6E6E6E",
+    "onAccent": "#FFFFFF",
+    "footMuted": "#9A9A9A"
+  },
+  "fonts": {
+    "serif": "'Noto Serif SC','Source Han Serif SC','Songti SC',serif",
+    "sans": "'Noto Sans SC','Source Han Sans SC','Microsoft YaHei',sans-serif"
+  },
+  "type": {
+    "posterTitle": 166,
+    "posterSub": 31,
+    "posterKicker": 21,
+    "posterTag": 21,
+    "posterPadX": 72,
+    "posterPadY": 80,
+    "posterPadB": 66,
+    "body": 26,
+    "title": 58
+  },
+  "variants": {
+    "posterBg": "#F3F1EC",
+    "posterInk": "#1A1A1A",
+    "posterInkMuted": "#8C8C8C",
+    "posterSealBg": "#FF8A3D",
+    "posterSealInk": "#FFFFFF",
+    "posterTexture": "bokeh",
+    "posterBokeh": [
+      [
+        12,
+        14,
+        11,
+        "#FFE0B4"
+      ],
+      [
+        82,
+        10,
+        10,
+        "#D2E2FF"
+      ],
+      [
+        92,
+        60,
+        12,
+        "#FFD2C8"
+      ],
+      [
+        6,
+        68,
+        10,
+        "#DEEDD0"
+      ],
+      [
+        46,
+        34,
+        13,
+        "#FFEFCE"
+      ],
+      [
+        66,
+        86,
+        11,
+        "#E4D6F4"
+      ],
+      [
+        30,
+        76,
+        9,
+        "#FFF4DC"
+      ],
+      [
+        58,
+        6,
+        8,
+        "#E6EEFF"
+      ]
+    ],
+    "posterRuleW": 200,
+    "posterRuleH": 10,
+    "posterTitleWeight": 900,
+    "posterTitleLS": "-0.02em",
+    "titleEffect": "halo",
+    "posterHaloColor": "rgba(255,255,255,.96)",
+    "quoteStyle": "bar"
+  },
+  "_note": "散景是 CSS 径向渐变的堆叠，不是真照片——要的是大光圈的暖光斑，不是内容。标题靠 halo 效果托一层白边压住背景，halo 颜色跟底色同源，不算第二处强调色。"
+}

@@ -1,0 +1,72 @@
+{
+  "id": "STYLE-28",
+  "name": "样张矩阵",
+  "oneLine": "浅灰底 + 深色标题压顶 + 一墙微倾的样张小画框",
+  "bestFor": "模型/工具评测、风格展示、生图模型发版。样张本身就是内容。",
+  "canvas": {
+    "width": 1080,
+    "height": 1440
+  },
+  "supportedCanvas": [
+    [
+      1080,
+      1440
+    ]
+  ],
+  "canvasNote": "竖版专属。标题只给 116px 字号——矩阵是主角，标题让路，否则样张被挤没。",
+  "colors": {
+    "paper": "#F4F4F2",
+    "ink": "#1A1A1A",
+    "accent": "#2B7FFF",
+    "muted": "#86868C",
+    "hairline": "#E2E2DE",
+    "quote": "#FFFFFF",
+    "body": "#2C2C2C",
+    "titleCn": "#6E6E74",
+    "onAccent": "#FFFFFF",
+    "footMuted": "#9A9AA0"
+  },
+  "fonts": {
+    "serif": "'Noto Serif SC','Source Han Serif SC','Songti SC',serif",
+    "sans": "'Noto Sans SC','Source Han Sans SC','Microsoft YaHei',sans-serif"
+  },
+  "type": {
+    "posterTitle": 116,
+    "posterSub": 28,
+    "posterKicker": 20,
+    "posterTag": 20,
+    "posterPadX": 72,
+    "posterPadY": 72,
+    "posterPadB": 62,
+    "body": 26,
+    "title": 58
+  },
+  "variants": {
+    "posterBg": "#F4F4F2",
+    "posterInk": "#1A1A1A",
+    "posterInkMuted": "#86868C",
+    "posterSealBg": "#2B7FFF",
+    "posterSealInk": "#FFFFFF",
+    "posterTexture": "none",
+    "posterGridCols": 3,
+    "posterGridTilt": 1.6,
+    "posterGridGap": 20,
+    "posterGridFrame": "#1A1A1A",
+    "posterGridBg": "#FFFFFF",
+    "posterGridInk": "#1A1A1A",
+    "posterGridTints": [
+      "linear-gradient(140deg,#DCE9FF,#F4F8FF)",
+      "linear-gradient(140deg,#FFE6D2,#FFF6EE)",
+      "linear-gradient(140deg,#E4F1E0,#F5FBF2)",
+      "linear-gradient(140deg,#F0E4FF,#F9F4FF)",
+      "linear-gradient(140deg,#FFEFF2,#FFF7F8)",
+      "linear-gradient(140deg,#FFF6D8,#FFFDF0)"
+    ],
+    "posterRuleW": 200,
+    "posterRuleH": 8,
+    "posterTitleWeight": 800,
+    "posterTitleLS": "-0.01em",
+    "quoteStyle": "bar"
+  },
+  "_note": "格子逐个错开 ±1.6° 是这套的命门：全正的等分网格会立刻变回被否掉的 02–05 那种 PPT 表格。每格给不同浅色渐变，才像一面挂满不同作品的墙。"
+}

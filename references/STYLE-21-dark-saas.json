@@ -1,0 +1,51 @@
+{
+  "id": "STYLE-21",
+  "name": "暗色 SaaS",
+  "oneLine": "深空黑底 + 电光蓝单一强调 + 发光描边，底部一行胶囊徽标",
+  "bestFor": "产品发布、工具测评、开发者向内容。极客气质。",
+  "canvas": { "width": 1080, "height": 1440 },
+  "supportedCanvas": [[1080, 1440]],
+  "canvasNote": "深底必须带光晕才有质感，纯黑会显廉价。强调色只许一种，绝不加第二种霓虹。",
+  "colors": {
+    "paper": "#FFFFFF",
+    "ink": "#F2F6FF",
+    "accent": "#2B7FFF",
+    "muted": "#8FA0C0",
+    "hairline": "#1C2740",
+    "quote": "#111A2E",
+    "body": "#C6D2E8",
+    "titleCn": "#7D8CAC",
+    "onAccent": "#06101F",
+    "footMuted": "#6E7E9E"
+  },
+  "fonts": {
+    "serif": "'Noto Serif SC','Source Han Serif SC','Songti SC',serif",
+    "sans": "'Noto Sans SC','Source Han Sans SC','Microsoft YaHei',sans-serif"
+  },
+  "type": {
+    "posterTitle": 158,
+    "posterSub": 30,
+    "posterKicker": 21,
+    "posterTag": 21,
+    "posterPadX": 72,
+    "posterPadY": 76,
+    "posterPadB": 64,
+    "body": 26,
+    "title": 62
+  },
+  "variants": {
+    "posterBg": "#0A0E1A",
+    "posterInk": "#F2F6FF",
+    "posterInkMuted": "#8FA0C0",
+    "posterSealBg": "#2B7FFF",
+    "posterSealInk": "#06101F",
+    "posterTagInk": "#2B7FFF",
+    "posterTexture": "glow",
+    "posterRuleW": 200,
+    "posterRuleH": 6,
+    "titleEffect": "shadow",
+    "posterTagStyle": "chip",
+    "quoteStyle": "outline"
+  },
+  "_note": "glow 用的 accent 是电光蓝，深底上形成中央光晕。titleEffect 用 shadow（投影）而不是描边 —— 描边在深底上会糊成一团。posterTagStyle=chip 把底部标签变成胶囊徽标，四个以内。"
+}

@@ -1,0 +1,49 @@
+{
+  "id": "STYLE-20",
+  "name": "纸感拼贴",
+  "oneLine": "马卡龙粉蓝底 + 大片纸片色块 + 胶带质感，标题印在最大那块纸上",
+  "bestFor": "手账、整理术、旧物改造、生活方式，轻松手作感。",
+  "canvas": { "width": 1080, "height": 1440 },
+  "supportedCanvas": [[1080, 1440]],
+  "canvasNote": "拼贴靠多块柔色叠出层次，不是加纹理。纸片块做成背景渐变，胶带做成色条。",
+  "colors": {
+    "paper": "#FFFFFF",
+    "ink": "#2E2A33",
+    "accent": "#FF6F91",
+    "muted": "#6E6478",
+    "hairline": "#E3D9EA",
+    "quote": "#F2E6F5",
+    "body": "#3B3542",
+    "titleCn": "#6B6274",
+    "onAccent": "#FFFFFF",
+    "footMuted": "#8C8296"
+  },
+  "fonts": {
+    "serif": "'Noto Serif SC','Source Han Serif SC','Songti SC',serif",
+    "sans": "'Noto Sans SC','Source Han Sans SC','Microsoft YaHei',sans-serif"
+  },
+  "type": {
+    "posterTitle": 158,
+    "posterSub": 30,
+    "posterKicker": 21,
+    "posterTag": 21,
+    "posterPadX": 72,
+    "posterPadY": 76,
+    "posterPadB": 64,
+    "body": 26,
+    "title": 62
+  },
+  "variants": {
+    "posterBg": "linear-gradient(112deg,transparent 0 16%,#FFE0EC 16% 44%,transparent 44%),linear-gradient(-24deg,transparent 0 52%,#D6E7FF 52% 82%,transparent 82%),linear-gradient(64deg,transparent 0 66%,#FFF0C4 66% 88%,transparent 88%),#F8F4FB",
+    "posterInk": "#2E2A33",
+    "posterInkMuted": "#6E6478",
+    "posterSealBg": "#FF6F91",
+    "posterSealInk": "#FFFFFF",
+    "posterTexture": "none",
+    "posterRuleW": 150,
+    "posterRuleH": 22,
+    "posterRuleOpacity": 0.85,
+    "quoteStyle": "fill"
+  },
+  "_note": "posterBg 吃多层 radial-gradient 拼出马卡龙纸片。胶带用 posterRuleH 拉高到 26px 的粗色条。accent 粉色只给印章和一处强调。"
+}

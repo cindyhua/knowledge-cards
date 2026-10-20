@@ -1,0 +1,68 @@
+{
+  "id": "STYLE-23",
+  "name": "品牌发布",
+  "oneLine": "深海军蓝底 + 纯白品牌名（关键词垫荧光绿块）+ 绿线与卖点小字",
+  "bestFor": "产品发布、版本更新、官方最佳实践。有明确品牌主体时首选。",
+  "canvas": {
+    "width": 1080,
+    "height": 1440
+  },
+  "supportedCanvas": [
+    [
+      1080,
+      1440
+    ]
+  ],
+  "canvasNote": "竖版专属。品牌名比 10 的干货大字报收敛一号——发布感靠留白和光晕，不靠压满。",
+  "colors": {
+    "paper": "#0A1F44",
+    "ink": "#FFFFFF",
+    "accent": "#3DFF88",
+    "muted": "#9FB3D9",
+    "hairline": "#16305E",
+    "quote": "#122C58",
+    "body": "#E6EEFB",
+    "titleCn": "#A9BDDF",
+    "onAccent": "#0A1F44",
+    "footMuted": "#7E94BE"
+  },
+  "fonts": {
+    "serif": "'Noto Serif SC','Source Han Serif SC','Songti SC',serif",
+    "sans": "'Noto Sans SC','Source Han Sans SC','Microsoft YaHei',sans-serif"
+  },
+  "type": {
+    "posterTitle": 156,
+    "posterSub": 28,
+    "posterKicker": 20,
+    "posterTag": 21,
+    "posterPadX": 72,
+    "posterPadY": 80,
+    "posterPadB": 66,
+    "body": 26,
+    "title": 58
+  },
+  "variants": {
+    "posterBg": "#0A1F44",
+    "posterInk": "#FFFFFF",
+    "posterInkMuted": "#A9BDDF",
+    "posterSealBg": "#3DFF88",
+    "posterSealInk": "#0A1F44",
+    "posterTexture": [
+      "grain",
+      "glow"
+    ],
+    "posterRuleColor": "#3DFF88",
+    "posterRuleW": 340,
+    "posterRuleH": 6,
+    "posterTagStyle": "chip",
+    "posterTitleWeight": 900,
+    "posterTitleLS": "-0.02em",
+    "titleEffect": "shadow",
+    "quoteStyle": "bar",
+    "metaLayout": "inline",
+    "posterFlow": "top",
+    "posterTitleTop": 210,
+    "posterGlowAt": "50% 70%"
+  },
+  "_note": "荧光绿是全图唯一强调色：色块、绿线、卖点小字都用它，别处不再出现第二种颜色。grain + glow 双层底纹 = 星尘噪点 + 中央一团柔光，拒绝死黑平板底。"
+}

@@ -1,0 +1,63 @@
+{
+  "id": "STYLE-25",
+  "name": "硬核立体字",
+  "oneLine": "深灰暗底 + 混凝土灰 3D 巨字（硬边挤出）+ 一处橙红光源",
+  "bestFor": "深度教程、从入门到精通、架构指南。字就是画面。",
+  "canvas": {
+    "width": 1080,
+    "height": 1440
+  },
+  "supportedCanvas": [
+    [
+      1080,
+      1440
+    ]
+  ],
+  "canvasNote": "竖版专属。3D 靠同字形多层硬偏移堆出来，不靠模糊阴影——模糊就变成投影了。",
+  "colors": {
+    "paper": "#24242A",
+    "ink": "#9EA0AA",
+    "accent": "#FF4D1C",
+    "muted": "#6E7078",
+    "hairline": "#33333B",
+    "quote": "#2E2E35",
+    "body": "#C9C9D2",
+    "titleCn": "#9A9AA4",
+    "onAccent": "#24242A",
+    "footMuted": "#6A6A74"
+  },
+  "fonts": {
+    "serif": "'Noto Serif SC','Source Han Serif SC','Songti SC',serif",
+    "sans": "'Noto Sans SC','Source Han Sans SC','Microsoft YaHei',sans-serif"
+  },
+  "type": {
+    "posterTitle": 186,
+    "posterSub": 30,
+    "posterKicker": 21,
+    "posterTag": 21,
+    "posterPadX": 72,
+    "posterPadY": 80,
+    "posterPadB": 66,
+    "body": 26,
+    "title": 58
+  },
+  "variants": {
+    "posterBg": "#1C1C21",
+    "posterInk": "#C2C4D0",
+    "posterInkMuted": "#6E7078",
+    "posterSealBg": "#FF4D1C",
+    "posterSealInk": "#1C1C21",
+    "posterTexture": "grain",
+    "titleEffect": "extrude",
+    "posterExtrudeColor": "#3E3F4A",
+    "posterExtrudeStep": 2,
+    "posterExtrudeLayers": 22,
+    "posterTitleWeight": 900,
+    "posterTitleLS": "-0.03em",
+    "posterRuleW": 260,
+    "posterRuleH": 14,
+    "quoteStyle": "bar",
+    "posterSealNumSize": 40
+  },
+  "_note": "「文字即建筑」：9 层硬偏移把字挤出成混凝土块，侧面保持实边不糊。橙红是唯一强调色，只出现在印章/标签上，别让它第二次进标题。"
+}

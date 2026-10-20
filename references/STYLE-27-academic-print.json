@@ -1,0 +1,69 @@
+{
+  "id": "STYLE-27",
+  "name": "学院版画",
+  "oneLine": "米黄纸底 + 铜版雕刻插图带 + 宋体巨标题，一枚朱红印章",
+  "bestFor": "方法论、拆解、评测类长内容。学术腔调让内容显得可信，适合专业读者。",
+  "canvas": {
+    "width": 1080,
+    "height": 1440
+  },
+  "supportedCanvas": [
+    [
+      1080,
+      1440
+    ]
+  ],
+  "canvasNote": "插图带的纸色必须和底色接近，图形才像印在同一张纸上；换底色要连插画一起换。",
+  "colors": {
+    "paper": "#EFE5CE",
+    "ink": "#1E1A13",
+    "accent": "#B03A28",
+    "muted": "#6B6151",
+    "hairline": "#D8CCB0",
+    "quote": "#E6DAC0",
+    "body": "#3A342A",
+    "titleCn": "#6B6151",
+    "onAccent": "#F7F1E2",
+    "footMuted": "#8C8270"
+  },
+  "fonts": {
+    "serif": "'Noto Serif SC','Source Han Serif SC','Songti SC',serif",
+    "sans": "'Noto Sans SC','Source Han Sans SC','Microsoft YaHei',sans-serif",
+    "mono": "'Consolas','Cascadia Mono','Courier New',monospace"
+  },
+  "type": {
+    "posterTitle": 146,
+    "posterSub": 28,
+    "posterKicker": 20,
+    "posterTag": 20,
+    "posterPadX": 76,
+    "posterPadY": 44,
+    "posterPadB": 62,
+    "body": 26,
+    "title": 58
+  },
+  "variants": {
+    "posterBg": "#EFE5CE",
+    "posterInk": "#1E1A13",
+    "posterInkMuted": "#6B6151",
+    "posterSealBg": "#B03A28",
+    "posterSealInk": "#F7F1E2",
+    "posterTagInk": "#B03A28",
+    "posterTexture": [
+      "paper",
+      "grain"
+    ],
+    "posterArtH": 430,
+    "posterArtFade": 150,
+    "posterArtPosition": "center 50%",
+    "posterTitleFamily": "'Noto Serif SC','Source Han Serif SC','Songti SC',serif",
+    "posterTitleWeight": 900,
+    "posterTitleLS": "0.01em",
+    "posterSubFamily": "'Consolas','Cascadia Mono','Courier New',monospace",
+    "posterSealNumSize": 40,
+    "posterRuleW": 200,
+    "posterRuleH": 8,
+    "quoteStyle": "outline"
+  },
+  "_note": "插画是铜版画，自带米黄纸色，所以底色必须贴住 #EFE5CE，带子和纸面才连成一张。朱红只给印章和标题里那个关键词。"
+}

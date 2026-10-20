@@ -1,0 +1,63 @@
+{
+  "id": "STYLE-26",
+  "name": "电影科技流",
+  "oneLine": "近黑夜色底 + 长曝光光带插画带 + 琥珀色点睛标题",
+  "bestFor": "氛围感强的叙事内容：实战记录、踩坑复盘、个人故事。暗底让光带成为唯一光源。",
+  "canvas": {
+    "width": 1080,
+    "height": 1440
+  },
+  "supportedCanvas": [
+    [
+      1080,
+      1440
+    ]
+  ],
+  "canvasNote": "插画带底部要渐隐进夜色底，否则会看到一条硬接缝，像贴上去的照片。",
+  "colors": {
+    "paper": "#060A12",
+    "ink": "#F4F7FB",
+    "accent": "#FFB020",
+    "muted": "#7F8AA0",
+    "hairline": "#1A2233",
+    "quote": "#101828",
+    "body": "#C3CBDA",
+    "titleCn": "#7F8AA0",
+    "onAccent": "#060A12",
+    "footMuted": "#5D6880"
+  },
+  "fonts": {
+    "serif": "'Noto Serif SC','Source Han Serif SC','Songti SC',serif",
+    "sans": "'Noto Sans SC','Source Han Sans SC','Microsoft YaHei',sans-serif"
+  },
+  "type": {
+    "posterTitle": 168,
+    "posterSub": 31,
+    "posterKicker": 21,
+    "posterTag": 21,
+    "posterPadX": 72,
+    "posterPadY": 44,
+    "posterPadB": 62,
+    "body": 26,
+    "title": 58
+  },
+  "variants": {
+    "posterBg": "#060A12",
+    "posterInk": "#F4F7FB",
+    "posterInkMuted": "#93A0B8",
+    "posterSealBg": "#FFB020",
+    "posterSealInk": "#060A12",
+    "posterTagInk": "#FFB020",
+    "posterTexture": "none",
+    "posterArtH": 600,
+    "posterArtFade": 260,
+    "posterArtPosition": "70% 46%",
+    "posterRuleW": 200,
+    "posterRuleH": 10,
+    "posterTagStyle": "chip",
+    "posterTitleWeight": 900,
+    "posterTitleLS": "-0.026em",
+    "quoteStyle": "outline"
+  },
+  "_note": "插画带用 posterArtFade 渐隐进夜色底，接缝就没了。琥珀色只给标题里的关键词和标签里的数字。焦点在画面右侧 70%，所以标题必须压左侧留白区。"
+}
